@@ -9,17 +9,11 @@
 \usepackage{fontspec}
 \setmainfont[Ligatures=TeX]{Gentium Plus}
 
-\usepackage{graphicx}
-\graphicspath{{images}}
-
 \usepackage{emoji}
 \setemojifont{Apple Color Emoji}
 
 \usepackage{xcolor}
-\newcommand{\gr}[1]{{#1}}
 \newcommand{\my}[1]{\textcolor{gray!60!white}{#1}}
-\newcommand{\mysection}[1]{\section*{\my{#1}}\addcontentsline{toc}{section}{#1}}
-\newcommand{\mysubsection}[1]{\subsection*{\my{#1}}\addcontentsline{toc}{subsection}{#1}}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -28,200 +22,186 @@
 	colorlinks,
 	pdftitle={Learning Greek},
 	pdfauthor={Alexander S. Kulikov},
-	pdfpagemode=FullScreen
+	pdfpagemode=FullScreen,
 }
 
-\usepackage{multicol}
+\newenvironment{page}{\normalsize\clearpage\null\vfill}{\vfill\null}
+\newcommand{\mysection}[1]{\section*{\my{#1}}\addcontentsline{toc}{section}{#1}}
+\newcommand{\mysubsection}[1]{\subsection*{\my{#1}}\addcontentsline{toc}{subsection}{#1}}
+
+
 
 \begin{document}
 	\pagestyle{empty}
 	\tableofcontents
 	\clearpage
 
-
 	\setlength{\tabcolsep}{3pt}
 	\setlength{\parindent}{0pt}
 	\centering
 
-	\mysection{\emoji{input-numbers} Numbers}
-
-	\mysubsection{\emoji{input-numbers} Integers}
-	\vfill
-	\small
-	\begin{tabular}{rlrlrl}
-		\my{0} & μηδέν\\
-		\my{1} & ένα & \my{10} & δέκα & \my{100} & εκατό\\
-		\my{2} & δύο & \my{20} & είκοσι & \my{200} & διακόσια\\
-		\my{3} & τρία & \my{30} & τριάντα & \my{300} & τριακόσια\\
-		\my{4} & τέσσερα & \my{40} & σαράντα & \my{400} & τετρακόσια\\
-		\my{5} & πέντε & \my{50} & πενήντα & \my{500} & πεντακόσια\\
-		\my{6} & έξι & \my{60} & εξήντα & \my{600} & εξακόσια\\
-		\my{7} & επτά & \my{70} & εβδομήντα & \my{700} & επτακόσια\\
-		\my{8} & οκτώ & \my{80} & ογδόντα & \my{800} & οχτακόσια\\
-		\my{9} & εννέα & \my{90} & ενενήντα & \my{900} & εννιακόσια\\
-		\my{10} & δέκα & \my{100} & εκατό &\my{1000} & χίλια\\
-		\my{11} & έντεκα & \my{110} & εκατόν δέκα\\
-		\my{12} & δώδεκα & \my{120} & εκατόν είκοσι\\
-	\end{tabular}
-	\normalsize
-	\vfill
-
-	\mysubsection{\emoji{sun} Weekdays}
-	\begin{tabular}{rrrl}
-		\my{Sunday} & \emoji{sun} & & η Κυριακή\\
-		\my{Monday} & \emoji{unamused-face} & δύο & η Δευτέρα\\
-		\my{Tuesday} & \emoji{neutral-face} & τρία & η Τρίτη\\
-		\my{Wednesday} & \emoji{face-without-mouth} & τέσσερα & η Τετάρτη\\
-		\my{Thursday} & \emoji{slightly-smiling-face} & πέντε & η Πέμπτη\\
-		\my{Friday} & \emoji{partying-face} & & η Παρασκευή\\
-		\my{Saturday} & \emoji{face-with-head-bandage} & & το Σάββατο\\
-	\end{tabular}
-
-	\vfill
-
-	\clearpage
-	\mysubsection{\emoji{watch} Time}
-
-	\vfill
-	\begin{tabular}{rcl}
-		 & & είναι \dots \\
-		14:00 & \emoji{clock2} & δύο (η ώρα) ακριβώς (το απόγευμα)\\
-		14:05 & & δύο και πέντε\\
-		14:15 & & δύο και δεκαπέντε\\
-		 & & δύο και τέταρτο\\
-		14:30 & \emoji{clock230} & δύο και τριάντα\\
-		 &  & δύο και μισή\\
-		 &  & δυόμιση\\
-		14:35 & & δύο τριάντα πέντε\\
-		 & & τρεις παρά είκοσι πέντε\\
-		14:40 & & τρεις παρά είκοσι\\
-		14:45 & & δύο και σαράντα πέντε\\
-		 & & τρεις παρά τέταρτο\\
-		15:30 & \emoji{clock330} & τρεις και τριάντα\\
-		 & & τρεισήμισι\\
-		16:30 & \emoji{clock430} & τεσσεράμισι\\
-	\end{tabular}
-	\vfill
-
-	\clearpage
-	\mysection{\emoji{man-dancing} Verbs}
-	\mysubsection{\emoji{performing-arts} To be}
+	\begin{page}
+		\mysection{\emoji{input-numbers} Numbers}
+		\mysubsection{\emoji{input-numbers} Integers}
+		\small
+		\begin{tabular}{rlrlrl}
+			\my{0} & μηδέν\\
+			\my{1} & ένα & \my{10} & δέκα & \my{100} & εκατό\\
+			\my{2} & δύο & \my{20} & είκοσι & \my{200} & διακόσια\\
+			\my{3} & τρία & \my{30} & τριάντα & \my{300} & τριακόσια\\
+			\my{4} & τέσσερα & \my{40} & σαράντα & \my{400} & τετρακόσια\\
+			\my{5} & πέντε & \my{50} & πενήντα & \my{500} & πεντακόσια\\
+			\my{6} & έξι & \my{60} & εξήντα & \my{600} & εξακόσια\\
+			\my{7} & επτά & \my{70} & εβδομήντα & \my{700} & επτακόσια\\
+			\my{8} & οκτώ & \my{80} & ογδόντα & \my{800} & οχτακόσια\\
+			\my{9} & εννέα & \my{90} & ενενήντα & \my{900} & εννιακόσια\\
+			\my{10} & δέκα & \my{100} & εκατό &\my{1000} & χίλια\\
+			\my{11} & έντεκα & \my{110} & εκατόν δέκα\\
+			\my{12} & δώδεκα & \my{120} & εκατόν είκοσι\\
+		\end{tabular}
+		\vfill
+		\mysubsection{\emoji{sun} Weekdays}
+		\begin{tabular}{rrrl}
+			\my{Sunday} & \emoji{sun} & & η Κυριακή\\
+			\my{Monday} & \emoji{unamused-face} & δύο & η Δευτέρα\\
+			\my{Tuesday} & \emoji{neutral-face} & τρία & η Τρίτη\\
+			\my{Wednesday} & \emoji{face-without-mouth} & τέσσερα & η Τετάρτη\\
+			\my{Thursday} & \emoji{slightly-smiling-face} & πέντε & η Πέμπτη\\
+			\my{Friday} & \emoji{partying-face} & & η Παρασκευή\\
+			\my{Saturday} & \emoji{face-with-head-bandage} & & το Σάββατο\\
+		\end{tabular}
+	\end{page}
 
 
-	\vfill
-	\Large
-	\begin{tabular}{rl}
-		εγώ & είμαι \\
-		εσύ & είσαι\\
-		αυτός/ή/ό & είναι\\
-		εμείς & είμαστε\\
-		εσείς & είστε\\
-		αυτοί/ές/ά & είναι\\
-	\end{tabular}
-	\normalsize
-	\vfill
-	%\includegraphics{tobe.jpg}
+	\begin{page}
+		\mysubsection{\emoji{watch} Time}
+		\begin{tabular}{rcl}
+			 & & είναι \dots \\
+			14:00 & \emoji{clock2} & δύο (η ώρα) ακριβώς (το απόγευμα)\\
+			14:05 & & δύο και πέντε\\
+			14:15 & & δύο και δεκαπέντε\\
+			 & & δύο και τέταρτο\\
+			14:30 & \emoji{clock230} & δύο και τριάντα\\
+			 &  & δύο και μισή\\
+			 &  & δυόμιση\\
+			14:35 & & δύο τριάντα πέντε\\
+			 & & τρεις παρά είκοσι πέντε\\
+			14:40 & & τρεις παρά είκοσι\\
+			14:45 & & δύο και σαράντα πέντε\\
+			 & & τρεις παρά τέταρτο\\
+			15:30 & \emoji{clock330} & τρεις και τριάντα\\
+			 & & τρεισήμισι\\
+			16:30 & \emoji{clock430} & τεσσεράμισι\\
+		\end{tabular}
+	\end{page}
 
-	\clearpage
-    \vfill
-	\mysubsection{\emoji{person-running} -ω}
-	\begin{tabular}{rcl}
-		κάνω & \emoji{mechanic} & \my{to do}\\
-		μένω & \emoji{house} & \my{to live}\\
-		έχω & \emoji{money-bag} & \my{to have}\\
-		δουλεύω & \emoji{office-worker} & \my{to work}\\
-		ξέρω & \emoji{mage} & \my{to know}\\
-		θέλω & \emoji{beer-mug} & \my{to want}\\
-		πηγαίνω & \emoji{person-running} & \my{to go}\\
-		καταλαβαίνω & \emoji{nerd-face} & \my{to understand}\\
-		πίνω & \emoji{cup-with-straw} & \my{to drink}\\
-		γράφω & \emoji{writing-hand} & \my{to write}\\
-		διαβάζω & \emoji{open-book} & \my{to read}\\
-		μαθαίνω & \emoji{books} & \my{to learn}\\
-		σπουδάζω & \emoji{student} & \my{to study}\\
-	\end{tabular}
-    \vfill\null
+	\begin{page}
+		\mysection{\emoji{man-dancing} Verbs}
+		\mysubsection{\emoji{performing-arts} To be}
+		\Large
+		\begin{tabular}{rl}
+			εγώ & είμαι \\
+			εσύ & είσαι\\
+			αυτός/ή/ό & είναι\\
+			εμείς & είμαστε\\
+			εσείς & είστε\\
+			αυτοί/ές/ά & είναι\\
+		\end{tabular}
+	\end{page}
 
+	\begin{page}
+		\mysubsection{\emoji{person-running} Group 1: -ω}
+		\begin{tabular}{rcl}
+			κάνω & \emoji{mechanic} & \my{to do}\\
+			μένω & \emoji{house} & \my{to live}\\
+			έχω & \emoji{money-bag} & \my{to have}\\
+			δουλεύω & \emoji{office-worker} & \my{to work}\\
+			ξέρω & \emoji{mage} & \my{to know}\\
+			θέλω & \emoji{beer-mug} & \my{to want}\\
+			πηγαίνω & \emoji{person-running} & \my{to go}\\
+			καταλαβαίνω & \emoji{nerd-face} & \my{to understand}\\
+			πίνω & \emoji{cup-with-straw} & \my{to drink}\\
+			γράφω & \emoji{writing-hand} & \my{to write}\\
+			διαβάζω & \emoji{open-book} & \my{to read}\\
+			μαθαίνω & \emoji{books} & \my{to learn}\\
+			σπουδάζω & \emoji{student} & \my{to study}\\
+		\end{tabular}
+    \end{page}
 
-	\clearpage
-    \null\vfill
-	\mysubsection{\emoji{singer} -άω}
-	\begin{tabular}{rcl}
-		μιλάω & \emoji{speaking-head} & \my{to speak}\\
-		αγαπάω & \emoji{smiling-face-with-hearts} & \my{to love}\\
-		τραγουδάω & \emoji{singer} & \my{to sing}\\
-		βοηθάω & \emoji{person-tipping-hand} & \my{to help}\\
-		ξεκινάω & \emoji{rocket} & \my{to start}\\
-		πεινάω & \emoji{poultry-leg} & \my{to be hungry}\\
-		διψάω & \emoji{face-exhaling} & \my{to be thirsty}\\
-		ξυπνάω & \emoji{yawning-face} & \my{to wake up}\\
-		ρωτάω & \emoji{red-question-mark} & \my{to ask}\\
-		απαντάω & \emoji{nerd-face} & \my{to answer}\\
-		σταματάω & \emoji{stop-button} & \my{to stop}\\
-		πονάω & \emoji{face-with-head-bandage} & \my{to be hurt}\\
-	\end{tabular}
-	\vfill
-	\mysubsection{\emoji{car} -ώ}
-	\begin{tabular}{rcl}
-		οδηγώ & \emoji{car} & \my{to drive}\\
-		μπορώ & \emoji{toolbox} & \my{to can}\\
-		τηλεφωνώ & \emoji{phone} & \my{to call}\\
-		αργώ & \emoji{alarm-clock} & \my{to be late}\\
-		χρησιμοποιώ & \emoji{mobile-phone} & \my{to use}\\
-		ζω & \emoji{house} & \my{to live}
-	\end{tabular}
-	\vfill\null
-
-
-	\clearpage
-    \null\vfill
-    \mysubsection{\emoji{man-walking} -ομαι}
-    \begin{tabular}{rcl}
-        έρχομαι & \emoji{man-walking} & \my{to come}\\
-        σκέφτομαι & \emoji{thinking-face} & \my{to think}\\
-        βρίσκομαι & \emoji{round-pushpin} & \my{находиться}\\
-        χρειάζομαι & \emoji{beer} & \my{to need}\\
-        πλένομαι & \emoji{bathtub} & \my{to bathe}\\
-        ντύνονται & \emoji{dress} & \my{to dress}\\
-        κουράζομαι & \emoji{sleeping-face} & \my{to be tired}\\
-        ξεκουράζομαι & \emoji{palm-tree} & \my{to rest}\\
-        σηκώνομαι & \emoji{man-running} & \my{to get up}\\
-        ετοιμάζομαι & \emoji{singer} & \my{to get ready}\\
-        κάθομαι & \emoji{chair} & \my{to sit down}\\
-        εργάζομαι & \emoji{office-worker} & \my{to work}\\
-    \end{tabular}
-    \vfill
-    \mysubsection{\emoji{zzz} -άμαι}
-    \begin{tabular}{rcl}
-        κοιμάμαι & \emoji{zzz} & \my{to sleep}\\
-        φοβάμαι & \emoji{face-screaming-in-fear} & \my{to be afraid}\\
-        λυπάμαι & \emoji{pensive-face} & \my{to be sorry} \\
-        θυμάμαι & \emoji{light-bulb} & \my{to remember}\\
-    \end{tabular}
-    \vfill\null
-
-	\clearpage
-    \null\vfill
-	\mysubsection{\emoji{memo} Conjugations}
-    \scriptsize
-	\begin{tabular}{rrrrrr}
-		& -ω & -άω & -ώ & -ομαι & -άμαι\\
-		εγώ & \my{μέν}ω & \my{μιλ}άω & \my{οδηγ}ώ & \my{έρχ}ομαι & \my{κοιμ}άμαι\\
-		εσύ &  \my{μέν}εις & \my{μιλ}άς & \my{οδηγ}είς & \my{έρχ}εσαι & \my{κοιμ}άσαι\\
-		αυτός/ή/ό &  \my{μέν}ει & \my{μιλ}άει& \my{οδηγ}εί & \my{έρχ}εται & \my{κοιμ}άται\\
-		εμείς &  \my{μέν}ουμε & \my{μιλ}άμε & \my{οδηγ}ούμε & \my{ερχ}όμαστε & \my{κοιμ}όμαστε\\
-		εσείς &  \my{μέν}ετε & \my{μιλ}άτε & \my{οδηγ}είτε & \my{έρχ}εστε & \my{κοιμ}άστε\\
-		αυτοί/ές/ά & \my{μέν}ουν& \my{μιλ}άνε & \my{οδηγ}ούν & \my{έρχ}ονται & \my{κοιμ}ούνται\\
-	\end{tabular}
-    \normalsize
-	\vfill\null
+	\begin{page}
+		\mysubsection{\emoji{singer} Group 2: -άω}
+		\begin{tabular}{rcl}
+			μιλάω & \emoji{speaking-head} & \my{to speak}\\
+			αγαπάω & \emoji{smiling-face-with-hearts} & \my{to love}\\
+			τραγουδάω & \emoji{singer} & \my{to sing}\\
+			βοηθάω & \emoji{person-tipping-hand} & \my{to help}\\
+			ξεκινάω & \emoji{rocket} & \my{to start}\\
+			πεινάω & \emoji{poultry-leg} & \my{to be hungry}\\
+			διψάω & \emoji{face-exhaling} & \my{to be thirsty}\\
+			ξυπνάω & \emoji{yawning-face} & \my{to wake up}\\
+			ρωτάω & \emoji{red-question-mark} & \my{to ask}\\
+			απαντάω & \emoji{nerd-face} & \my{to answer}\\
+			σταματάω & \emoji{stop-button} & \my{to stop}\\
+			πονάω & \emoji{face-with-head-bandage} & \my{to be hurt}\\
+		\end{tabular}
+		\vfill
+		\mysubsection{\emoji{car} Group 3: -ώ}
+		\begin{tabular}{rcl}
+			οδηγώ & \emoji{car} & \my{to drive}\\
+			μπορώ & \emoji{toolbox} & \my{to can}\\
+			τηλεφωνώ & \emoji{phone} & \my{to call}\\
+			αργώ & \emoji{alarm-clock} & \my{to be late}\\
+			χρησιμοποιώ & \emoji{mobile-phone} & \my{to use}\\
+			ζω & \emoji{house} & \my{to live}
+		\end{tabular}
+	\end{page}
 
 
-	\clearpage
+	\begin{page}
+	    \mysubsection{\emoji{man-walking} Group 4: -ομαι}
+	    \begin{tabular}{rcl}
+	        έρχομαι & \emoji{man-walking} & \my{to come}\\
+	        σκέφτομαι & \emoji{thinking-face} & \my{to think}\\
+	        βρίσκομαι & \emoji{round-pushpin} & \my{находиться}\\
+	        χρειάζομαι & \emoji{beer} & \my{to need}\\
+	        πλένομαι & \emoji{bathtub} & \my{to bathe}\\
+	        ντύνονται & \emoji{dress} & \my{to dress}\\
+	        κουράζομαι & \emoji{sleeping-face} & \my{to be tired}\\
+	        ξεκουράζομαι & \emoji{palm-tree} & \my{to rest}\\
+	        σηκώνομαι & \emoji{man-running} & \my{to get up}\\
+	        ετοιμάζομαι & \emoji{singer} & \my{to get ready}\\
+	        κάθομαι & \emoji{chair} & \my{to sit down}\\
+	        εργάζομαι & \emoji{office-worker} & \my{to work}\\
+	    \end{tabular}
+	    \vfill
+	    \mysubsection{\emoji{zzz} Group 5: -άμαι}
+	    \begin{tabular}{rcl}
+	        κοιμάμαι & \emoji{zzz} & \my{to sleep}\\
+	        φοβάμαι & \emoji{face-screaming-in-fear} & \my{to be afraid}\\
+	        λυπάμαι & \emoji{pensive-face} & \my{to be sorry} \\
+	        θυμάμαι & \emoji{light-bulb} & \my{to remember}\\
+	    \end{tabular}
+    \end{page}
+
+	\begin{page}	
+		\mysubsection{\emoji{memo} Conjugations}
+	    \scriptsize
+		\begin{tabular}{rrrrrr}
+			& -ω & -άω & -ώ & -ομαι & -άμαι\\
+			εγώ & \my{μέν}ω & \my{μιλ}άω & \my{οδηγ}ώ & \my{έρχ}ομαι & \my{κοιμ}άμαι\\
+			εσύ &  \my{μέν}εις & \my{μιλ}άς & \my{οδηγ}είς & \my{έρχ}εσαι & \my{κοιμ}άσαι\\
+			αυτός/ή/ό &  \my{μέν}ει & \my{μιλ}άει& \my{οδηγ}εί & \my{έρχ}εται & \my{κοιμ}άται\\
+			εμείς &  \my{μέν}ουμε & \my{μιλ}άμε & \my{οδηγ}ούμε & \my{ερχ}όμαστε & \my{κοιμ}όμαστε\\
+			εσείς &  \my{μέν}ετε & \my{μιλ}άτε & \my{οδηγ}είτε & \my{έρχ}εστε & \my{κοιμ}άστε\\
+			αυτοί/ές/ά & \my{μέν}ουν& \my{μιλ}άνε & \my{οδηγ}ούν & \my{έρχ}ονται & \my{κοιμ}ούνται\\
+		\end{tabular}
+    \end{page}
+
+
+	\begin{page}
     \mysection{\emoji{artist} People}
     \mysubsection{\emoji{handshake} Meeting}
     \scriptsize
-    \vfill
 	\begin{tabular}{rl}%{p{32mm}p{60mm}}
 		Γεια σας! & \my{Здравствуйте!}\\
 		Γεια σου! & \my{Привет!}\\
@@ -260,133 +240,126 @@
 		Καληνύχτα! & \my{Спокойной ночи!}\\
 		Τα λέμε! & \my{До встречи!}
 	\end{tabular}
-	\vfill
-	\normalsize
+	\end{page}
 
-	\clearpage
-	\mysubsection{\emoji{firefighter} Professions}
+	\begin{page}
+		\mysubsection{\emoji{firefighter} Professions}
+		\small
+		\begin{tabular}{rrcl}
+			\multicolumn{2}{r}{\emoji{male-sign}/\emoji{female-sign}}\\
+			\multicolumn{2}{r}{γιατρός} & \emoji{health-worker} & \my{doctor}\\
+			\multicolumn{2}{r}{μηχανικός} & \emoji{mechanic} & \my{engineer}\\
+			\multicolumn{2}{r}{αστυνομικός}  & \emoji{police-officer} & \my{police-officer}\\
+			\multicolumn{2}{r}{φαρμακοποιός}  & \emoji{man-health-worker} & \my{pharmacist}\\
+			\multicolumn{2}{r}{τεχνικός}  & \emoji{construction-worker} & \my{technician} \\
+			\multicolumn{2}{r}{δικηγόρος}  & \emoji{judge} & \my{lawyer}\\
+			\multicolumn{2}{r}{υπάλληλος}  & \emoji{office-worker} & \my{employee}\\
+			\multicolumn{2}{r}{διπλωμάτης}  & \emoji{briefcase} & \my{diplomat}\\
+			\multicolumn{2}{r}{ταμίας}  & \emoji{euro-banknote} & \my{cashier}\\
+			\multicolumn{2}{r}{γραμματέας}  & \emoji{hot-beverage} & \my{secretary}\\
+			\multicolumn{2}{r}{συνταξιούχος} & \emoji{older-person} & \my{retiree}\\[2mm]
+			\emoji{male-sign} & \emoji{female-sign}\\
+			άνεργος & άνεργη & \emoji{star-struck} & \my{unemployed}\\
+			κομμωτής & κομμώτρια & \emoji{person-getting-haircut} & \my{barber}\\
+			καθηγητής & καθηγήτρια & \emoji{teacher} & \my{lecturer}\\
+			πωλητής & πωλήτρια & \emoji{office-worker} & \my{salesperson}\\
+			νοσηλευτής & νοσηλεύτρια & \emoji{health-worker} & \my{nurse}\\
+			μαθητής & μαθήτρια & \emoji{child} & \my{learner}\\
+			φοιτητής & φοιτήτρια & \emoji{student} & \my{student}\\
+			δάσκαλος & δασκάλα & \emoji{teacher} & \my{teacher}\\
+			ταξιτζής & ταξιτζού & \emoji{pilot} & \my{taxi driver}\\
+		\end{tabular}
+	\end{page}
 
-	\vfill
-	\begin{tabular}{rrcl}
-		\multicolumn{2}{r}{\emoji{male-sign}/\emoji{female-sign}}\\
-		\multicolumn{2}{r}{γιατρός} & \emoji{health-worker} & \my{doctor}\\
-		\multicolumn{2}{r}{μηχανικός} & \emoji{mechanic} & \my{engineer}\\
-		\multicolumn{2}{r}{αστυνομικός}  & \emoji{police-officer} & \my{police-officer}\\
-		\multicolumn{2}{r}{φαρμακοποιός}  & \emoji{man-health-worker} & \my{pharmacist}\\
-		\multicolumn{2}{r}{τεχνικός}  & \emoji{construction-worker} & \my{technician} \\
-		\multicolumn{2}{r}{δικηγόρος}  & \emoji{judge} & \my{lawyer}\\
-		\multicolumn{2}{r}{υπάλληλος}  & \emoji{office-worker} & \my{employee}\\
-		\multicolumn{2}{r}{διπλωμάτης}  & \emoji{briefcase} & \my{diplomat}\\
-		\multicolumn{2}{r}{ταμίας}  & \emoji{euro-banknote} & \my{cashier}\\
-		\multicolumn{2}{r}{γραμματέας}  & \emoji{hot-beverage} & \my{secretary}\\
-		\multicolumn{2}{r}{συνταξιούχος} & \emoji{older-person} & \my{retiree}\\[2mm]
-		\emoji{male-sign} & \emoji{female-sign}\\
-		άνεργος & άνεργη & \emoji{star-struck} & \my{unemployed}\\
-		κομμωτής & κομμώτρια & \emoji{person-getting-haircut} & \my{barber}\\
-		καθηγητής & καθηγήτρια & \emoji{teacher} & \my{lecturer}\\
-		πωλητής & πωλήτρια & \emoji{office-worker} & \my{salesperson}\\
-		νοσηλευτής & νοσηλεύτρια & \emoji{health-worker} & \my{nurse}\\
-		μαθητής & μαθήτρια & \emoji{child} & \my{learner}\\
-		φοιτητής & φοιτήτρια & \emoji{student} & \my{student}\\
-		δάσκαλος & δασκάλα & \emoji{teacher} & \my{teacher}\\
-		ταξιτζής & ταξιτζού & \emoji{pilot} & \my{taxi driver}\\
-	\end{tabular}
-	\vfill
-	\null
+	\begin{page}
+		\vspace{-3mm}
+		\mysection{\emoji{cool-button} Adjectives}
+		\scriptsize
+		\begin{tabular}{rcl}
+			καλός & \emoji{superhero} & \my{good}\\
+			κακός & \emoji{supervillain} & \my{bad}\\[1mm]
+			μεγάλος & \emoji{office-building} & \my{large (size), old (age)}\\
+			μικρός & \emoji{microbe} & \my{small}\\
+			εύκολος & \emoji{balloon} & \my{light, easy}\\
+			δύσκολος & \emoji{person-lifting-weights} & \my{heavy, difficult}\\[1mm]
+			όμορφος & \emoji{princess} & \my{beautiful}\\
+			ωραίος & \emoji{cool-button} & \my{nice}\\
+			άσχημος & \emoji{goblin} & \my{ugly}\\[2mm]
+			καινούριος & \emoji{new} & \my{new}\\
+			νέος & \emoji{baby} & \my{young, new}\\
+			μοντέρνος & \emoji{cityscape} & \my{modern}\\
+			φρέσκος & \emoji{leafy-green} & \my{fresh}\\
+			παλιός & \emoji{amphora} & \my{old (things only)}\\[1mm]
+			γλυκός & \emoji{lollipop} & \my{sweet}\\[1mm]
+			ακριβός & \emoji{money-bag} & \my{expensive}\\
+			φτηνός & \emoji{label} & \my{cheap}\\
+			πλούσιος & \emoji{gem-stone} & \my{rich}\\
+			φτωχός & \emoji{coin} & \my{poor}\\[2mm]
+			ψηλός & \emoji{tokyo-tower} & \my{tall}\\
+			κοντός & \emoji{mouse} & \my{short}\\
+			λεπτός & \emoji{feather} & \my{thin}\\
+			χοντρός & \emoji{wood} & \my{thick}\\[1mm]
+			ζεστός & \emoji{sun} & \my{warm}\\
+			κρύος & \emoji{cold-face} & \my{cold}\\[1mm]
+			καθαρός & \emoji{soap} & \my{clean}\\
+			βρώμικος & \emoji{litter-in-bin-sign} & \my{dirty}\\
+		\end{tabular}
+	\end{page}
 
-	\mysection{\emoji{cool-button} Adjectives}
-	\vfill
-	\footnotesize
-	\vspace{-4mm}
-	\begin{tabular}{rcl}
-		καλός & \emoji{superhero} & \my{good}\\
-		κακός & \emoji{supervillain} & \my{bad}\\[2mm]
-		μεγάλος & \emoji{office-building} & \my{large (size), old (age)}\\
-		μικρός & \emoji{microbe} & \my{small}\\
-		εύκολος & \emoji{balloon} & \my{light, easy}\\
-		δύσκολος & \emoji{person-lifting-weights} & \my{heavy, difficult}\\[2mm]
-		όμορφος & \emoji{princess} & \my{beautiful}\\
-		ωραίος & \emoji{cool-button} & \my{nice}\\
-		άσχημος & \emoji{goblin} & \my{ugly}\\[2mm]
-		καινούριος & \emoji{new} & \my{new}\\
-		νέος & \emoji{baby} & \my{young, new}\\
-		μοντέρνος & \emoji{cityscape} & \my{modern}\\
-		φρέσκος & \emoji{leafy-green} & \my{fresh}\\
-		παλιός & \emoji{amphora} & \my{old (things only)}\\[2mm]
-		γλυκός & \emoji{lollipop} & \my{sweet}\\[2mm]
-		ακριβός & \emoji{money-bag} & \my{expensive}\\
-		φτηνός & \emoji{label} & \my{cheap}\\
-		πλούσιος & \emoji{gem-stone} & \my{rich}\\
-		φτωχός & \emoji{coin} & \my{poor}\\[2mm]
-		ψηλός & \emoji{tokyo-tower} & \my{tall}\\
-		κοντός & \emoji{mouse} & \my{short}\\
-		λεπτός & \emoji{feather} & \my{thin}\\
-		χοντρός & \emoji{wood} & \my{thick}\\[2mm]
-		ζεστός & \emoji{sun} & \my{warm}\\
-		κρύος & \emoji{cold-face} & \my{cold}\\[2mm]
-		καθαρός & \emoji{soap} & \my{clean}\\
-		βρώμικος & \emoji{litter-in-bin-sign} & \my{dirty}\\
-	\end{tabular}
-	\normalsize
-	\vfill
+    \begin{page}
+	    \mysection{\emoji{people-holding-hands} Plural}
+	    \begin{tabular}{rrrrrr}
+	        o \emoji{male-sign} & οι \emoji{male-sign}\emoji{male-sign} &
+	        \quad η \emoji{female-sign} & οι \emoji{female-sign}\emoji{female-sign} &
+	        \quad το \emoji{package} & τα \emoji{package}\emoji{package}\\
+	        -ης & -ες & -η & -ες & -ι & -ια\\
+	        -ας & -ες & -α & -ες & -o & -α\\
+	        -ος & -οι & -ος & -οι & -ος & -η\\
+	        & &&& -μα & -ματα\\
+	    \end{tabular}
+    \end{page}
 
-    \clearpage
-    \null\vfill
-    \mysection{\emoji{people-holding-hands} Plural}
-    \begin{tabular}{rrrrrr}
-        o \emoji{male-sign} & οι \emoji{male-sign}\emoji{male-sign} &
-        \quad η \emoji{female-sign} & οι \emoji{female-sign}\emoji{female-sign} &
-        \quad το \emoji{package} & τα \emoji{package}\emoji{package}\\
-        -ης & -ες & -η & -ες & -ι & -ια\\
-        -ας & -ες & -α & -ες & -o & -α\\
-        -ος & -οι & -ος & -οι & -ος & -η\\
-        & &&& -μα & -ματα\\
-    \end{tabular}
-    \vfill
-
-    \clearpage
-    \mysection{\emoji{backhand-index-pointing-right} Accusative case}
-    \null\vfill
-
-    \small
-    \begin{tabular}{rrrr}
-        \emoji{male-sign} &
-        \emoji{male-sign}\emoji{male-sign} &
-        \emoji{backhand-index-pointing-right}\emoji{male-sign} & \emoji{backhand-index-pointing-right}\emoji{male-sign}\emoji{male-sign}\\
-        ο \my{αθλητ}ής & οι \my{αθλητ}ές & τον \my{αθλητ}ή & τους \my{αθλητ}ές\\
-        ο \my{άνδρ}ας & οι \my{άνδρ}ες & τον \my{άνδρ}α & τους \my{άνδρ}ες\\
-        ο \my{φίλ}ος & οι \my{φίλ}οι & τον \my{φίλ}ο & τους \my{φίλ}ους\\
-        \my{αυτ}ός & \my{αυτ}οί & \my{αυτ}όν & \my{αυτ}ούς\\
-        \my{εκείν}ος & \my{εκείν}οι & \my{εκείν}ον & \my{εκείν}ους\\
-        \my{πόσ}ος & \my{πόσ}οι & \my{πόσ}ο(ν) & \my{πόσ}ους\\
-        \my{πολ}ύς & \my{πολ}λοί & \my{πολ}ύ & \my{πολ}λούς\\
-        [5mm]
-        %
-        \emoji{female-sign} &
-        \emoji{female-sign}\emoji{female-sign} &
-        \emoji{backhand-index-pointing-right}\emoji{female-sign} & \emoji{backhand-index-pointing-right}\emoji{female-sign}\emoji{female-sign}\\
-        η \my{φίλ}η & οι \my{φίλ}ες & τη \my{φίλ}η & τις \my{φίλ}ες\\
-        η \my{γυναίκ}α & οι \my{γυναίκ}ες & τη \my{γυναίκ}α & τις \my{γυναίκ}ες\\
-        η \my{οδ}ός & οι \my{οδ}οί & την \my{οδ}ό & τις \my{οδ}ούς\\
-        \my{αυτ}ή & \my{αυτ}ές & \my{αυτ}ή & \my{αυτ}ές\\
-        \my{εκείν}η & \my{εκείν}ες & \my{εκείν}η & \my{εκείν}ες\\
-        \my{πόσ}η & \my{πόσ}ες & \my{πόσ}η & \my{πόσ}ες\\
-        \my{πολ}λή & \my{πολ}λές & \my{πολ}λή & \my{πολ}λές\\
-        [5mm]
-        %
-        \emoji{package} &
-        \emoji{package}\emoji{package} &
-        \emoji{backhand-index-pointing-right}\emoji{package} & \emoji{backhand-index-pointing-right}\emoji{package}\emoji{package}\\
-        το \my{δώρ}ο & τα \my{δώρ}α & το \my{δώρ}ο & τα \my{δώρ}α\\
-        το \my{παιδ}ί & τα \my{παιδ}ιά & το \my{παιδ}ί & τα \my{παιδ}ιά\\
-        το \my{μάθη}μα & τα \my{μαθή}ματα & το \my{μάθη}μα & τα \my{μαθή}ματα\\
-        το \my{λάθ}ος & τα \my{λάθ}η & το \my{λάθ}ος & τα \my{λάθ}η\\
-        \my{αυτ}ό & \my{αυτ}ά & \my{αυτ}ό & \my{αυτ}ά\\
-        \my{εκείν}ο & \my{εκείν}α & \my{εκείν}ο & \my{εκείν}α\\
-        \my{πόσ}ο & \my{πόσ}α & \my{πόσ}ο & \my{πόσ}α\\
-        \my{πολ}ύ & \my{πολ}λά & \my{πολ}ύ & \my{πολ}λά
-    \end{tabular}
-    \vfill
+    \begin{page}
+	    \mysection{\emoji{backhand-index-pointing-right} Accusative case}
+	    \small
+	    \begin{tabular}{rrrr}
+	        \emoji{male-sign} &
+	        \emoji{male-sign}\emoji{male-sign} &
+	        \emoji{backhand-index-pointing-right}\emoji{male-sign} & \emoji{backhand-index-pointing-right}\emoji{male-sign}\emoji{male-sign}\\
+	        ο \my{αθλητ}ής & οι \my{αθλητ}ές & τον \my{αθλητ}ή & τους \my{αθλητ}ές\\
+	        ο \my{άνδρ}ας & οι \my{άνδρ}ες & τον \my{άνδρ}α & τους \my{άνδρ}ες\\
+	        ο \my{φίλ}ος & οι \my{φίλ}οι & τον \my{φίλ}ο & τους \my{φίλ}ους\\
+	        \my{αυτ}ός & \my{αυτ}οί & \my{αυτ}όν & \my{αυτ}ούς\\
+	        \my{εκείν}ος & \my{εκείν}οι & \my{εκείν}ον & \my{εκείν}ους\\
+	        \my{πόσ}ος & \my{πόσ}οι & \my{πόσ}ο(ν) & \my{πόσ}ους\\
+	        \my{πολ}ύς & \my{πολ}λοί & \my{πολ}ύ & \my{πολ}λούς\\
+	        [2mm]
+	        %
+	        \emoji{female-sign} &
+	        \emoji{female-sign}\emoji{female-sign} &
+	        \emoji{backhand-index-pointing-right}\emoji{female-sign} & \emoji{backhand-index-pointing-right}\emoji{female-sign}\emoji{female-sign}\\
+	        η \my{φίλ}η & οι \my{φίλ}ες & τη \my{φίλ}η & τις \my{φίλ}ες\\
+	        η \my{γυναίκ}α & οι \my{γυναίκ}ες & τη \my{γυναίκ}α & τις \my{γυναίκ}ες\\
+	        η \my{οδ}ός & οι \my{οδ}οί & την \my{οδ}ό & τις \my{οδ}ούς\\
+	        \my{αυτ}ή & \my{αυτ}ές & \my{αυτ}ή & \my{αυτ}ές\\
+	        \my{εκείν}η & \my{εκείν}ες & \my{εκείν}η & \my{εκείν}ες\\
+	        \my{πόσ}η & \my{πόσ}ες & \my{πόσ}η & \my{πόσ}ες\\
+	        \my{πολ}λή & \my{πολ}λές & \my{πολ}λή & \my{πολ}λές\\
+	        [2mm]
+	        %
+	        \emoji{package} &
+	        \emoji{package}\emoji{package} &
+	        \emoji{backhand-index-pointing-right}\emoji{package} & \emoji{backhand-index-pointing-right}\emoji{package}\emoji{package}\\
+	        το \my{δώρ}ο & τα \my{δώρ}α & το \my{δώρ}ο & τα \my{δώρ}α\\
+	        το \my{παιδ}ί & τα \my{παιδ}ιά & το \my{παιδ}ί & τα \my{παιδ}ιά\\
+	        το \my{μάθη}μα & τα \my{μαθή}ματα & το \my{μάθη}μα & τα \my{μαθή}ματα\\
+	        το \my{λάθ}ος & τα \my{λάθ}η & το \my{λάθ}ος & τα \my{λάθ}η\\
+	        \my{αυτ}ό & \my{αυτ}ά & \my{αυτ}ό & \my{αυτ}ά\\
+	        \my{εκείν}ο & \my{εκείν}α & \my{εκείν}ο & \my{εκείν}α\\
+	        \my{πόσ}ο & \my{πόσ}α & \my{πόσ}ο & \my{πόσ}α\\
+	        \my{πολ}ύ & \my{πολ}λά & \my{πολ}ύ & \my{πολ}λά
+	    \end{tabular}
+    \end{page}
 
     \clearpage
     \mysection{\emoji{atom-symbol} Conjunctions and particles}
