@@ -28,16 +28,32 @@
 \newenvironment{page}{\normalsize\clearpage\null\vfill}{\vfill\null}
 \newcommand{\mysection}[1]{\section*{\my{#1}}\addcontentsline{toc}{section}{#1}}
 \newcommand{\mysubsection}[1]{\subsection*{\my{#1}}\addcontentsline{toc}{subsection}{#1}}
+\newcommand{\mysubsubsection}[1]{\subsubsection*{\my{#1}}\addcontentsline{toc}{subsubsection}{#1}}
 
 
 
 \begin{document}
 	\pagestyle{empty}
-	\tableofcontents
-	\clearpage
+    \setlength{\tabcolsep}{3pt}
+    \setlength{\parindent}{0pt}
 
-	\setlength{\tabcolsep}{3pt}
-	\setlength{\parindent}{0pt}
+    \begin{page}
+        \emoji{cyprus} Γεια σας!
+
+        The latest version of~this pdf can be~found
+        \href{https://github.com/alexanderskulikov/greek}{here}
+        (last updated: \today{}).
+        There, you'll also find the source file that you may use
+        to~adjust this pdf for your needs. The current layout
+        is~optimized for mobile devices. Table of~contents items
+        are clickable.
+
+        Enjoy!
+    \end{page}
+
+    \clearpage
+    \footnotesize
+	\tableofcontents
 	\centering
 
 	\begin{page}
@@ -110,7 +126,8 @@
 	\end{page}
 
 	\begin{page}
-		\mysubsection{\emoji{person-running} Group 1: -ω}
+        \mysubsection{\emoji{stopwatch} Present tense}
+		\mysubsubsection{\emoji{person-running} -ω, -εις, -ει, -ουμε, -ετε, -ουν}
 		\begin{tabular}{rcl}
 			κάνω & \emoji{mechanic} & \my{to do}\\
 			μένω & \emoji{house} & \my{to live}\\
@@ -129,7 +146,7 @@
     \end{page}
 
 	\begin{page}
-		\mysubsection{\emoji{singer} Group 2: -άω}
+		\mysubsubsection{\emoji{singer} -άω, -άς, -άει, -άμε, άτε, άνε}
 		\begin{tabular}{rcl}
 			μιλάω & \emoji{speaking-head} & \my{to speak}\\
 			αγαπάω & \emoji{smiling-face-with-hearts} & \my{to love}\\
@@ -145,7 +162,7 @@
 			πονάω & \emoji{face-with-head-bandage} & \my{to be hurt}\\
 		\end{tabular}
 		\vfill
-		\mysubsection{\emoji{car} Group 3: -ώ}
+		\mysubsubsection{\emoji{car} -ώ, -είς, -εί, -ούμε, -είτε, -ούν}
 		\begin{tabular}{rcl}
 			οδηγώ & \emoji{car} & \my{to drive}\\
 			μπορώ & \emoji{toolbox} & \my{to can}\\
@@ -156,9 +173,8 @@
 		\end{tabular}
 	\end{page}
 
-
 	\begin{page}
-	    \mysubsection{\emoji{man-walking} Group 4: -ομαι}
+	    \mysubsubsection{\emoji{man-walking} -ομαι, -εσαι, -εται, -όμαστε, -εστε, -ονται}
 	    \begin{tabular}{rcl}
 	        έρχομαι & \emoji{man-walking} & \my{to come}\\
 	        σκέφτομαι & \emoji{thinking-face} & \my{to think}\\
@@ -174,7 +190,7 @@
 	        εργάζομαι & \emoji{office-worker} & \my{to work}\\
 	    \end{tabular}
 	    \vfill
-	    \mysubsection{\emoji{zzz} Group 5: -άμαι}
+	    \mysubsubsection{\emoji{zzz} -άμαι, -άσαι, -άται, -όμαστε, -άστε, -ονται}
 	    \begin{tabular}{rcl}
 	        κοιμάμαι & \emoji{zzz} & \my{to sleep}\\
 	        φοβάμαι & \emoji{face-screaming-in-fear} & \my{to be afraid}\\
@@ -183,8 +199,8 @@
 	    \end{tabular}
     \end{page}
 
-	\begin{page}	
-		\mysubsection{\emoji{memo} Conjugations}
+	\begin{page}
+		\mysubsubsection{\emoji{memo} Summary}
 	    \scriptsize
 		\begin{tabular}{rrrrrr}
 			& -ω & -άω & -ώ & -ομαι & -άμαι\\
@@ -197,49 +213,91 @@
 		\end{tabular}
     \end{page}
 
+    \begin{page}
+        \mysubsection{\emoji{hourglass-not-done} Past simple tense}
+        \mysubsubsection{\emoji{person-juggling} Irregular verbs}
+        %\footnotesize
+        \begin{tabular}{rcll}
+            \multicolumn{4}{c}{-ω, -εις, -ει, -ουμε, -ετε, -ουν}\\
+            [2mm]
+            πλένω & \emoji{bathtub} & θα πλύνω & \my{to wash}\\
+            παίρνω & \emoji{package} & θα πάρω & \my{to take}\\
+            φεύγω & \emoji{dash} & θα φύγω & \my{to leave}\\
+            βάζω & \emoji{put-litter-in-its-place} & θα βάλω & \my{to put}\\
+            βγάζω & \emoji{door} & θα βγάλω & \my{to go out}\\
+            μαθαίνω & \emoji{books} & θα μάθω & \my{to learn}\\
+            καταλαβαίνω & \emoji{thought-balloon} & θα καταλάβω & \my{to understand}\\
+            στέλνω & \emoji{envelope} & θα στείλω & \my{to send}\\
+            δίνω & \emoji{gift} & θα δώσω & \my{to give}\\
+            φέρνω & \emoji{shopping-bags} & θα φέρω & \my{to bring}\\
+            θέλω & \emoji{thought-balloon} & θα θελήσω & \my{to want}\\
+            μένω & \emoji{house} & θα μείνω & \my{to stay}\\
+            πέφτω & \emoji{leaves} & θα πέσω & \my{to fall}\\
+            παραγγέλνω & \emoji{takeout-box} & θα παραγγείλω & \my{to order}\\
+            έρχομαι & \emoji{arrow-right-hook} & θα έρθω & \my{to come}\\
+            γίνομαι & \emoji{seedling} & θα γίνω & \my{to become}\\
+            κάθομαι & \emoji{chair} & θα καθίσω & \my{to seat}\\
+            τρώω & \emoji{fork-and-knife} & θα φάω & \my{to eat}\\
+        \end{tabular}
+    \end{page}
+
+    \begin{page}
+        \begin{tabular}{rcll}
+            \multicolumn{4}{c}{-ώ, -είς, -εί, -ούμε, -είτε, -ούν}\\
+            [2mm]
+            βλέπω & \emoji{eyes} & θα δω & \my{to see}\\
+            λέω & \emoji{speech-balloon} & θα πω & \my{to say}\\
+            πίνω & \emoji{cup-with-straw} & θα πιω & \my{to drink}\\
+            βγαίνω & \emoji{door} & θα βγω & \my{to go out}\\
+            μπαίνω & \emoji{arrow-right} & θα μπω & \my{to enter}\\
+            βρίσκω & \emoji{mag} & θα βρω & \my{to find}\\
+            ανεβαίνω & \emoji{arrow-up} & θα ανεβώ & \my{to go up}\\
+            κατεβαίνω & \emoji{arrow-down} & θα κατεβώ & \my{to go down}\\
+        \end{tabular}
+    \end{page}
 
 	\begin{page}
-    \mysection{\emoji{artist} People}
-    \mysubsection{\emoji{handshake} Meeting}
-    \scriptsize
-	\begin{tabular}{rl}%{p{32mm}p{60mm}}
-		Γεια σας! & \my{Здравствуйте!}\\
-		Γεια σου! & \my{Привет!}\\
-		Καλημέρα! & \my{Доброе утро (день)!}\\[2mm]
-		%
-		Πώς σε λένε; & \my{Как тебя зовут?}\\
-		Με λένε Μαρία. & \my{Меня зовут Мария.}\\
-		Εσένα; & \my{А тебя?}\\
-		Χαίρο πολύ! & \my{Приятно познакомиться!}\\
-		Χάρικα πολύ! & \my{Приятно было познакомиться!}\\
-		Επίσης! & \my{Мне тоже!}\\
-		Κι εγώ! & \my{И мне!}\\[2mm]
-		%
-		Από πού είσαι; & \my{Откуда ты?}\\
-		Από πού είστε; & \my{Откуда Вы?}\\
-		Είμαι από τη Ρωσία. & \my{Я из России.}\\
-		Εσύ; & \my{А ты?}\\
-		Εσείς; & \my{А Вы?}\\
-		Πού μένεις; & \my{Где живёшь?}\\
-		Μένω στην Κύπρο. & \my{Живу на Кипре.}\\[2mm]
-		%
-		Τι κάνεις; & \my{Как у тебя дела?}\\
-		Τι κάνετε; & \my{Как у Вас дела?}\\
-		Πώς είσαι; & \my{Как ты?}\\
-		Πώς είστε; & \my{Как Вы?}\\
-		Καλά! & \my{Хорошо!}\\
-		Πολύ καλά! & \my{Очень хорошо!}\\
-		Τέλεια! & \my{Отлично!}\\
-		Έτσι κι έτσι. & \my{Так себе.}\\[2mm]
-		 %
-		Τι δουλειά κάνεις; & \my{Кем работаешь?}\\
-		Με τι ασχολείσαι; & \my{Кем работаешь?}\\[2mm]
-
-		Καλό μεσημέρι! & \my{Хорошего дня!}\\
-		Καλό βράδυ! & \my{Хорошего вечера!}\\
-		Καληνύχτα! & \my{Спокойной ночи!}\\
-		Τα λέμε! & \my{До встречи!}
-	\end{tabular}
+        \mysection{\emoji{artist} People}
+        \mysubsection{\emoji{handshake} Meeting}
+        \scriptsize
+    	\begin{tabular}{rl}%{p{32mm}p{60mm}}
+    		Γεια σας! & \my{Здравствуйте!}\\
+    		Γεια σου! & \my{Привет!}\\
+    		Καλημέρα! & \my{Доброе утро (день)!}\\
+            [2mm]
+    		Πώς σε λένε; & \my{Как тебя зовут?}\\
+    		Με λένε Μαρία. & \my{Меня зовут Мария.}\\
+    		Εσένα; & \my{А тебя?}\\
+    		Χαίρο πολύ! & \my{Приятно познакомиться!}\\
+    		Χάρικα πολύ! & \my{Приятно было познакомиться!}\\
+    		Επίσης! & \my{Мне тоже!}\\
+    		Κι εγώ! & \my{И мне!}\\
+            [2mm]
+    		Από πού είσαι; & \my{Откуда ты?}\\
+    		Από πού είστε; & \my{Откуда Вы?}\\
+    		Είμαι από τη Ρωσία. & \my{Я из России.}\\
+    		Εσύ; & \my{А ты?}\\
+    		Εσείς; & \my{А Вы?}\\
+    		Πού μένεις; & \my{Где живёшь?}\\
+    		Μένω στην Κύπρο. & \my{Живу на Кипре.}\\
+            [2mm]
+    		Τι κάνεις; & \my{Как у тебя дела?}\\
+    		Τι κάνετε; & \my{Как у Вас дела?}\\
+    		Πώς είσαι; & \my{Как ты?}\\
+    		Πώς είστε; & \my{Как Вы?}\\
+    		Καλά! & \my{Хорошо!}\\
+    		Πολύ καλά! & \my{Очень хорошо!}\\
+    		Τέλεια! & \my{Отлично!}\\
+    		Έτσι κι έτσι. & \my{Так себе.}\\
+            [2mm]
+    		Τι δουλειά κάνεις; & \my{Кем работаешь?}\\
+    		Με τι ασχολείσαι; & \my{Кем работаешь?}\\
+            [2mm]
+       		Καλό μεσημέρι! & \my{Хорошего дня!}\\
+    		Καλό βράδυ! & \my{Хорошего вечера!}\\
+    		Καληνύχτα! & \my{Спокойной ночи!}\\
+    		Τα λέμε! & \my{До встречи!}
+    	\end{tabular}
 	\end{page}
 
 	\begin{page}
@@ -361,60 +419,56 @@
 	    \end{tabular}
     \end{page}
 
-    \clearpage
-    \mysection{\emoji{atom-symbol} Conjunctions and particles}
-    \null\vfill
-    \begin{tabular}{rl}
-        Όμως & \my{but, however}\\
-        Όταν & \my{when}\\
-        Αν & \my{if}\\
-        Και & \my{and}\\
-        Γιατί & \my{because, why}\\
-        Ή & \my{or}\\
-        Που & \my{that, which, who}\\
-        Μετά & \my{after}\\
-        Πριν & \my{before}\\
-        Επειδή & \my{because}\\
-        Μόλις & \my{as soon as}\\
-        Ενώ & \my{while, whereas}\\
-        Αφού & \my{since, after}\\
-        Όπου & \my{where}\\
-        Ωστόσο & \my{nevertheless, yet}\\
-    \end{tabular}
-    \vfill\null
+    \begin{page}
+        \mysection{\emoji{atom-symbol} Conjunctions and particles}
+        \begin{tabular}{rl}
+            Όμως & \my{but, however}\\
+            Όταν & \my{when}\\
+            Αν & \my{if}\\
+            Και & \my{and}\\
+            Γιατί & \my{because, why}\\
+            Ή & \my{or}\\
+            Που & \my{that, which, who}\\
+            Μετά & \my{after}\\
+            Πριν & \my{before}\\
+            Επειδή & \my{because}\\
+            Μόλις & \my{as soon as}\\
+            Ενώ & \my{while, whereas}\\
+            Αφού & \my{since, after}\\
+            Όπου & \my{where}\\
+            Ωστόσο & \my{nevertheless, yet}\\
+        \end{tabular}
+    \end{page}
 
-    \clearpage
-    \mysection{\emoji{owl} What? Where? When?}
-    \scriptsize
-    \null\vfill
+    \begin{page}
+        \mysection{\emoji{owl} What? Where? When?}
+        \scriptsize
+        \mysubsection{\emoji{bust-in-silhouette} Nominative Case}
+        \hspace{-2mm}
+        \begin{tabular}{rllllll}
+            & \emoji{male-sign} & \emoji{female-sign} & \emoji{package} & \emoji{male-sign}\emoji{male-sign} & \emoji{female-sign}\emoji{female-sign} & \emoji{package}\emoji{package}\\
+            \my{Who} & Ποιος & Ποια & Ποιο &  Ποιοι & Ποιες & Ποια\\
+            \my{What} & Τι & Τι & Τι & Τι & Τι & Τι\\
+            \my{Where} & Πού & Πού & Πού & Πού & Πού & Πού\\
+            \my{When} & Πότε & Πότε & Πότε & Πότε & Πότε & Πότε\\
+            \my{Why} & Γιατί & Γιατί & Γιατί & Γιατί & Γιατί & Γιατί\\
+            \my{What for} & Για ποιον & Για ποια & Για ποιο & Για ποιους & Για ποιες & Για ποια\\
+            \my{Which} & Ποιος & Ποια & Ποιο & Ποιοι & Ποιες & Ποια\\
+            \my{Whose} & Ποιανού & Ποιανής & Ποιανού & Ποιανών & Ποιανών & Ποιανών\\
+        \end{tabular}
 
-    \mysubsection{\emoji{bust-in-silhouette} Nominative Case}
-    \hspace{-2mm}
-    \begin{tabular}{rllllll}
-        & \emoji{male-sign} & \emoji{female-sign} & \emoji{package} & \emoji{male-sign}\emoji{male-sign} & \emoji{female-sign}\emoji{female-sign} & \emoji{package}\emoji{package}\\
-        \my{Who} & Ποιος & Ποια & Ποιο &  Ποιοι & Ποιες & Ποια\\
-        \my{What} & Τι & Τι & Τι & Τι & Τι & Τι\\
-        \my{Where} & Πού & Πού & Πού & Πού & Πού & Πού\\
-        \my{When} & Πότε & Πότε & Πότε & Πότε & Πότε & Πότε\\
-        \my{Why} & Γιατί & Γιατί & Γιατί & Γιατί & Γιατί & Γιατί\\
-        \my{What for} & Για ποιον & Για ποια & Για ποιο & Για ποιους & Για ποιες & Για ποια\\
-        \my{Which} & Ποιος & Ποια & Ποιο & Ποιοι & Ποιες & Ποια\\
-        \my{Whose} & Ποιανού & Ποιανής & Ποιανού & Ποιανών & Ποιανών & Ποιανών\\
-    \end{tabular}
-
-    \mysubsection{\emoji{backhand-index-pointing-right} Accusative case}
-    \hspace{-2mm}
-    \begin{tabular}{rllllll}
-        & \emoji{male-sign} & \emoji{female-sign} & \emoji{package} & \emoji{male-sign}\emoji{male-sign} & \emoji{female-sign}\emoji{female-sign} & \emoji{package}\emoji{package}\\
-        \my{Whom} & Ποιον & Ποια & Ποιο & Ποιους & Ποιες & Ποια\\
-                \my{What} & Τι & Τι & Τι & Τι & Τι & Τι\\
-        \my{Where} & Πού & Πού & Πού & Πού & Πού & Πού\\
-        \my{When} & Πότε & Πότε & Πότε & Πότε & Πότε & Πότε\\
-        \my{Why} & Γιατί & Γιατί & Γιατί & Γιατί & Γιατί & Γιατί\\
-        \my{What for} & Για ποιον & Για ποια & Για ποιο & Για ποιους & Για ποιες & Για ποια\\
-        \my{Which} & Ποιον & Ποια & Ποιο & Ποιους & Ποιες & Ποια\\
-    \end{tabular}
-    \vfill\null
-    \normalsize
+        \mysubsection{\emoji{backhand-index-pointing-right} Accusative case}
+        \hspace{-2mm}
+        \begin{tabular}{rllllll}
+            & \emoji{male-sign} & \emoji{female-sign} & \emoji{package} & \emoji{male-sign}\emoji{male-sign} & \emoji{female-sign}\emoji{female-sign} & \emoji{package}\emoji{package}\\
+            \my{Whom} & Ποιον & Ποια & Ποιο & Ποιους & Ποιες & Ποια\\
+                    \my{What} & Τι & Τι & Τι & Τι & Τι & Τι\\
+            \my{Where} & Πού & Πού & Πού & Πού & Πού & Πού\\
+            \my{When} & Πότε & Πότε & Πότε & Πότε & Πότε & Πότε\\
+            \my{Why} & Γιατί & Γιατί & Γιατί & Γιατί & Γιατί & Γιατί\\
+            \my{What for} & Για ποιον & Για ποια & Για ποιο & Για ποιους & Για ποιες & Για ποια\\
+            \my{Which} & Ποιον & Ποια & Ποιο & Ποιους & Ποιες & Ποια\\
+        \end{tabular}
+    \end{page}
 
 \end{document}
