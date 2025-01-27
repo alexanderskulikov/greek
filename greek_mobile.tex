@@ -4,7 +4,10 @@
 
 \documentclass[12pt]{extarticle}
 
-\usepackage[paperheight=156mm, paperwidth=87.75mm, margin=2mm]{geometry}
+\usepackage[paperheight=156mm, paperwidth=87.75mm, margin=2mm, showframe=false]{geometry}
+
+\usepackage{booktabs}
+\usepackage{multirow}
 
 \usepackage{fontspec}
 \setmainfont[Ligatures=TeX]{Gentium Plus}
@@ -114,7 +117,6 @@
 	\begin{page}
 		\mysection{\emoji{man-dancing} Verbs}
 		\mysubsection{\emoji{performing-arts} To be}
-		\Large
 		\begin{tabular}{rl}
 			εγώ & είμαι \\
 			εσύ & είσαι\\
@@ -123,13 +125,12 @@
 			εσείς & είστε\\
 			αυτοί/ές/ά & είναι\\
 		\end{tabular}
-	\end{page}
 
-    \begin{page}
         \mysubsection{\emoji{stopwatch} Present tense}
 
         \small
         \begin{tabular}{rrrrrr}
+            & \emoji{one} & \emoji{two} & \emoji{three} & \emoji{four} & \emoji{five}\\
             εγώ & -ω & -άω & -ώ & -ομαι & -άμαι\\
             εσύ &  -εις & -άς & -είς & -εσαι & -άσαι\\
             αυτός/ή/ό &  -ει & -άει& -εί & -εται & -άται\\
@@ -140,6 +141,7 @@
         \vfill
         \scriptsize
         \begin{tabular}{rrrrrr}
+            & \emoji{one} & \emoji{two} & \emoji{three} & \emoji{four} & \emoji{five}\\
             & -ω & -άω & -ώ & -ομαι & -άμαι\\
             εγώ & \my{μέν}ω & \my{μιλ}άω & \my{οδηγ}ώ & \my{έρχ}ομαι & \my{κοιμ}άμαι\\
             εσύ &  \my{μέν}εις & \my{μιλ}άς & \my{οδηγ}είς & \my{έρχ}εσαι & \my{κοιμ}άσαι\\
@@ -222,77 +224,244 @@
 	        θυμάμαι & \emoji{light-bulb} & \my{to remember}\\
 	    \end{tabular}
     \end{page}
-    
-    \begin{page}
-    	\mysubsection{\emoji{rocket} Future simple tense}
-    	\mysubsubsection{\emoji{one} -ω}
-    	\begin{tabular}{rcll}
-    		\multicolumn{4}{c}{\my{ζ, v $\to$ σ}}\\
-			διαβάζω & \emoji{book} & θα διαβάσω & \my{to read}\\
-			τελειώνω & \emoji{white-check-mark} & θα τελειώσω & \my{to finish}\\
-			%
-			\multicolumn{4}{c}{\my{γ, χ, χν, σκ $\to$ ξ}}\\
-			ανοίγω & \emoji{unlock} & θα ανοίξω & \my{to open}\\
-			προσέχω & \emoji{warning} & θα προσέξω & \my{to pay attention}\\
-			φτιάχνω & \emoji{hammer-and-wrench} & θα φτιάξω & \my{to make}\\
-			διδάσκω & \emoji{mortar-board} & θα διδάξω & \my{to teach}\\
-			%
-			\multicolumn{4}{c}{\my{π, β, φ $\to$ ψ}}\\
-			λείπω & \emoji{cry} & θα λείψω & \my{to be missing}\\
-			ανάβω & \emoji{bulb} & θα ανάψω & \my{to turn on}\\
-			γράφω & \emoji{writing-hand} & θα γράψω & \my{to write}\\
-			%
-			\multicolumn{4}{c}{\my{εύ $\to$ έψ}}\\
-			δουλεύω & \emoji{office} & θα δουλέψω & \my{to work}\\
-			%
-			\multicolumn{4}{c}{\my{irregular}}\\
-			κοιτάζω & \emoji{eyes} & θα κοιτάξω & \my{to look}\\
-			αλλάζω & \emoji{arrows-clockwise} & θα αλλάξω & \my{to change}\\
-			πειράζω & \emoji{face-with-hand-over-mouth} & θα πειράξω & \my{to tease}\\
-			φωνάζω & \emoji{scream} & θα φωνάξω & \my{to scream}\\
-			παίζω & \emoji{game-die} & θα παίξω & \my{to play}\\
-    	\end{tabular}
-    \end{page}
 
     \begin{page}
-        \mysubsubsection{\emoji{person-juggling} Irregular verbs}
-        %\footnotesize
-        \begin{tabular}{rcll}
-            \multicolumn{4}{c}{-ω, -εις, -ει, -ουμε, -ετε, -ουν}\\
+        \mysubsection{\emoji{rocket} Future simple tense}
+        \tiny
+        \begin{tabular}{lrclll}
+            %\toprule[.2mm]
+            \multirow{6}{*}{\emoji{repeat}} & είμαι & \emoji{bust-in-silhouette} & θα είμαι && \my{to be}\\
+            &έχω & \emoji{open-hands} & θα έχω && \my{to have}\\
+            &κάνω & \emoji{gear} & θα κάνω && \my{to do}\\
+            &ξέρω & \emoji{brain} & θα ξέρω && \my{to know}\\
+            &περιμένω & \emoji{hourglass} & θα περιμένω && \my{to wait}\\
+            &πηγαίνω & \emoji{arrow-right} & θα πάω && \my{to go}\\
+            %\midrule[.1mm]
             [2mm]
-            πλένω & \emoji{bathtub} & θα πλύνω & \my{to wash}\\
-            παίρνω & \emoji{package} & θα πάρω & \my{to take}\\
-            φεύγω & \emoji{dash} & θα φύγω & \my{to leave}\\
-            βάζω & \emoji{put-litter-in-its-place} & θα βάλω & \my{to put}\\
-            βγάζω & \emoji{door} & θα βγάλω & \my{to take out}\\
-            μαθαίνω & \emoji{books} & θα μάθω & \my{to learn}\\
-            καταλαβαίνω & \emoji{thought-balloon} & θα καταλάβω & \my{to understand}\\
-            στέλνω & \emoji{envelope} & θα στείλω & \my{to send}\\
-            δίνω & \emoji{gift} & θα δώσω & \my{to give}\\
-            φέρνω & \emoji{shopping-bags} & θα φέρω & \my{to bring}\\
-            θέλω & \emoji{thought-balloon} & θα θελήσω & \my{to want}\\
-            μένω & \emoji{house} & θα μείνω & \my{to stay}\\
-            πέφτω & \emoji{leaves} & θα πέσω & \my{to fall}\\
-            παραγγέλνω & \emoji{takeout-box} & θα παραγγείλω & \my{to order}\\
-            έρχομαι & \emoji{arrow-right-hook} & θα έρθω & \my{to come}\\
-            γίνομαι & \emoji{seedling} & θα γίνω & \my{to become}\\
-            κάθομαι & \emoji{chair} & θα καθίσω & \my{to seat}\\
-            τρώω & \emoji{fork-and-knife} & θα φάω & \my{to eat}\\
+            \multirow{10}{*}{\emoji{one}} & διαβάζω & \emoji{book} & θα διαβάσω &
+            & \my{to read}\\
+            &τελειώνω & \emoji{white-check-mark} & θα τελειώσω && \my{to finish}\\
+            &ανοίγω & \emoji{unlock} & θα ανοίξω && \my{to open}\\
+            &προσέχω & \emoji{warning} & θα προσέξω && \my{to pay attention}\\
+            &φτιάχνω & \emoji{hammer-and-wrench} & θα φτιάξω && \my{to make}\\
+            &διδάσκω & \emoji{mortar-board} & θα διδάξω && \my{to teach}\\
+            &λείπω & \emoji{cry} & θα λείψω && \my{to be missing}\\
+            &ανάβω & \emoji{bulb} & θα ανάψω && \my{to turn on}\\
+            &γράφω & \emoji{writing-hand} & θα γράψω && \my{to write}\\
+            &δουλεύω & \emoji{office} & θα δουλέψω && \my{to work}\\
+            [2mm]
+            \multirow{10}{*}{\emoji{two}} &μιλάω & \emoji{speech-balloon} & θα μιλήσω && \my{to speak}\\
+            &αγαπάω & \emoji{heart} & θα αγαπήσω && \my{to love}\\
+            &ρωτάω & \emoji{question} & θα ρωτήσω && \my{to ask}\\
+            &φοράω & \emoji{t-shirt} & θα φορέσω && \my{to wear}\\
+            &αρρωσταίνω & \emoji{face-with-thermometer} & θα αρρωστήσω && \my{to be ill}\\
+            &γελάω & \emoji{joy} & θα γελάσω && \my{to laugh}\\
+            &διψάω & \emoji{cup-with-straw} & θα διψάσω && \my{to be thirsty}\\
+            [2mm]
+            \multirow{5}{*}{\emoji{three}} &αργώ & \emoji{hourglass} & θα αργήσω && \my{to be late}\\
+            &τηλεφωνώ & \emoji{telephone} & θα τηλεφωνήσω && \my{to call}\\
+            &χρησιμοποιώ & \emoji{wrench} & θα χρησιμοποιήσω\hspace{-2mm} && \my{to use}\\
+            &παρατηρώ & \emoji{eyes} & θα παρατηρήσω && \my{to observe}\\
+            &ζω & \emoji{house} & θα ζήσω && \my{to live}\\
+            [2mm]
+            \multirow{4}{*}{\emoji{four}} &έρχομαι & \emoji{running} & θα έρθω && \my{to come}\\
+            &γίνομαι & \emoji{sparkles} & θα γίνω & & \my{to become}\\
+            &κάθομαι & \emoji{chair} & θα καθίσω && \my{to seat}\\
+            [2mm]
+            \multirow{1}{*}{\emoji{five}} &κοιμάμαι & \emoji{zzz} & θα κοιμηθώ &  & \my{to sleep}\\
+            [2mm]
+            \multirow{13}{*}{\emoji{triangular-flag-on-post}}
+            &παίρνω & \emoji{package} & θα πάρω && \my{to take}\\
+            &φεύγω & \emoji{dash} & θα φύγω && \my{to leave}\\
+            &βάζω & \emoji{put-litter-in-its-place} & θα βάλω && \my{to put}\\
+            &βγάζω & \emoji{door} & θα βγάλω && \my{to take out}\\
+            &μαθαίνω & \emoji{books} & θα μάθω && \my{to learn}\\
+            &καταλαβαίνω & \emoji{thought-balloon} & θα καταλάβω && \my{to understand}\\
+            %
+            &βλέπω & \emoji{eyes} & θα δω & & \my{to see}\\
+            &λέω & \emoji{speech-balloon} & θα πω && \my{to say}\\
+            &πίνω & \emoji{cup-with-straw} & θα πιω && \my{to drink}\\
+            &βγαίνω & \emoji{door} & θα βγω && \my{to go out}\\
+            &μπαίνω & \emoji{arrow-right} & θα μπω && \my{to enter}\\
+            %
+            &τρώω & \emoji{fork-and-knife} & θα φάω && \my{to eat}\\
+            &πηγαίνω & \emoji{arrow-right} & θα πάω && \my{to go}\\
+        \end{tabular}
+    \end{page}
+
+
+    \begin{page}
+    	\mysubsubsection{\emoji{one} -ω}
+        \footnotesize
+    	\begin{tabular}{rclll}
+    		\multicolumn{5}{l}{\my{ζ, v $\to$ σ}}\\
+			διαβάζω & \emoji{book} & θα διαβάσω &                 \multirow{18}{10mm}{
+                \begin{tabular}{l}
+                    \emoji{one}\\
+                    -ω\\
+                    -εις\\
+                    -ει\\
+                    -ουμε\\
+                    -ετε\\
+                    -ουν
+                \end{tabular}
+            } & \my{to read}\\
+			τελειώνω & \emoji{white-check-mark} & θα τελειώσω && \my{to finish}\\
+            %[2mm]
+			%
+			\multicolumn{5}{l}{\my{γ, χ, χν, σκ $\to$ ξ}}\\
+			ανοίγω & \emoji{unlock} & θα ανοίξω && \my{to open}\\
+			προσέχω & \emoji{warning} & θα προσέξω && \my{to pay attention}\\
+			φτιάχνω & \emoji{hammer-and-wrench} & θα φτιάξω && \my{to make}\\
+			διδάσκω & \emoji{mortar-board} & θα διδάξω && \my{to teach}\\
+			%[2mm]
+            %
+			\multicolumn{5}{l}{\my{π, β, φ $\to$ ψ}}\\
+			λείπω & \emoji{cry} & θα λείψω && \my{to be missing}\\
+			ανάβω & \emoji{bulb} & θα ανάψω && \my{to turn on}\\
+			γράφω & \emoji{writing-hand} & θα γράψω && \my{to write}\\
+			%
+			\multicolumn{5}{l}{\my{εύ $\to$ έψ}}\\
+            %[2mm]
+			δουλεύω & \emoji{office} & θα δουλέψω && \my{to work}\\
+			%
+			\multicolumn{5}{l}{\my{exceptions}}\\
+            %[2mm]
+			κοιτάζω & \emoji{eyes} & θα κοιτάξω && \my{to look}\\
+			αλλάζω & \emoji{arrows-clockwise} & θα αλλάξω && \my{to change}\\
+			πειράζω & \emoji{face-with-hand-over-mouth} & θα πειράξω && \my{to tease}\\
+			φωνάζω & \emoji{scream} & θα φωνάξω && \my{to scream}\\
+			παίζω & \emoji{game-die} & θα παίξω && \my{to play}\\
+    	\end{tabular}
+
+        \mysubsubsection{\emoji{four} -ομαι and \emoji{five} -άμαι}
+        \begin{tabular}{rclll}
+            έρχομαι & \emoji{running} & θα έρθω && \my{to come}\\
+            γίνομαι & \emoji{sparkles} & θα γίνω & \emoji{one} & \my{to become}\\
+            κάθομαι & \emoji{chair} & θα καθίσω && \my{to seat}\\
+            κοιμάμαι & \emoji{zzz} & θα κοιμηθώ & \emoji{three} & \my{to sleep}\\
         \end{tabular}
     \end{page}
 
     \begin{page}
-        \begin{tabular}{rcll}
-            \multicolumn{4}{c}{-ώ, -είς, -εί, -ούμε, -είτε, -ούν}\\
+        \mysubsubsection{\emoji{two} -άω and \emoji{three} -ω}
+        \scriptsize
+        \begin{tabular}{rclll}
+            \multicolumn{5}{l}{\my{άω $\to$ ήσω}}\\
+            μιλάω & \emoji{speech-balloon} & θα μιλήσω &
+            \multirow{34}{8mm}{
+                \begin{tabular}{l}
+                    \emoji{one}\\
+                    -ω\\
+                    -εις\\
+                    -ει\\
+                    -ουμε\\
+                    -ετε\\
+                    -ουν
+                \end{tabular}
+            } & \my{to speak}\\
+            αγαπάω & \emoji{heart} & θα αγαπήσω && \my{to love}\\
+            ρωτάω & \emoji{question} & θα ρωτήσω && \my{to ask}\\
+            απαντάω & \emoji{white-check-mark} & θα απαντήσω && \my{to answer}\\
+            ξεκινάω & \emoji{rocket} & θα ξεκινήσω && \my{to start}\\
+            σταματάω & \emoji{stop-sign} & θα σταματήσω && \my{to stop}\\
+            ξυπνάω & \emoji{alarm-clock} & θα ξυπνήσω && \my{to wake up}\\
+            συναντάω & \emoji{handshake} & θα συναντήσω && \my{to meet}\\
+            βοηθάω & \emoji{handshake} & θα βοηθήσω && \my{to help}\\
+            πηγαίνω & \emoji{arrow-right} & θα πάω && \my{to go}\\
+            \multicolumn{5}{l}{\my{ώ $\to$ ήσω}}\\
+            αργώ & \emoji{hourglass} & θα αργήσω && \my{to be late}\\
+            τηλεφωνώ & \emoji{telephone} & θα τηλεφωνήσω && \my{to call}\\
+            χρησιμοποιώ & \emoji{wrench} & θα χρησιμοποιήσω\hspace{-2mm} && \my{to use}\\
+            παρατηρώ & \emoji{eyes} & θα παρατηρήσω && \my{to observe}\\
+            ζω & \emoji{house} & θα ζήσω && \my{to live}\\
+            \multicolumn{5}{l}{\my{άω $\to$ έσω}}\\
+            φοράω & \emoji{t-shirt} & θα φορέσω && \my{to wear}\\
+            αρρωσταίνω & \emoji{face-with-thermometer} & θα αρρωστήσω && \my{to be ill}\\
+            καλώ & \emoji{telephone-receiver} & θα καλέσω && \my{to call}\\
+            μπορώ & \emoji{muscle} & θα μπορέσω && \my{can}\\
+            \multicolumn{5}{l}{\my{άω $\to$ άσ}}\\
+            γελάω & \emoji{joy} & θα γελάσω && \my{to laugh}\\
+            διψάω & \emoji{cup-with-straw} & θα διψάσω && \my{to be thirsty}\\
+            πεινάω & \emoji{hamburger} & θα πεινάσω && \my{to be hungry}\\
+            \multicolumn{5}{l}{\my{exceptions}}\\
+            περνάω & \emoji{checkered-flag} & θα περάσω && \my{to pass}\\
+            ξεχνάω & \emoji{thought-balloon} & θα ξεχάσω && \my{to forget}\\
+            κερνάω & \emoji{clinking-glasses} & θα κεράσω && \my{to treat}\\
             [2mm]
-            βλέπω & \emoji{eyes} & θα δω & \my{to see}\\
-            λέω & \emoji{speech-balloon} & θα πω & \my{to say}\\
-            πίνω & \emoji{cup-with-straw} & θα πιω & \my{to drink}\\
-            βγαίνω & \emoji{door} & θα βγω & \my{to go out}\\
-            μπαίνω & \emoji{arrow-right} & θα μπω & \my{to enter}\\
-            βρίσκω & \emoji{mag} & θα βρω & \my{to find}\\
-            ανεβαίνω & \emoji{arrow-up} & θα ανεβώ & \my{to go up}\\
-            κατεβαίνω & \emoji{arrow-down} & θα κατεβώ & \my{to go down}\\
+            βουτάω & \emoji{diving-mask} & θα βουτήξω && \my{to dive}\\
+            τραβάω & \emoji{leftwards-arrow-with-hook} & θα τραβήξω && \my{to pull}\\
+            κοιτάω & \emoji{eyes} & θα κοιτάξω && \my{to look}\\
+            πετάω & \emoji{airplane} & θα πετάξω && \my{to fly}\\
+        \end{tabular}
+    \end{page}
+
+
+    \begin{page}
+        \mysubsubsection{\emoji{triangular-flag-on-post} Irregular verbs}
+        \scriptsize
+        \begin{tabular}{rclll}
+            %\toprule
+            πλένω & \emoji{bathtub} & θα πλύνω &
+                \multirow{18}{10mm}{
+                    \begin{tabular}{l}
+                        \emoji{one}\\
+                        -ω\\
+                        -εις\\
+                        -ει\\
+                        -ουμε\\
+                        -ετε\\
+                        -ουν
+                    \end{tabular}
+                }
+                & \my{to wash}\\
+            παίρνω & \emoji{package} & θα πάρω && \my{to take}\\
+            φεύγω & \emoji{dash} & θα φύγω && \my{to leave}\\
+            βάζω & \emoji{put-litter-in-its-place} & θα βάλω && \my{to put}\\
+            βγάζω & \emoji{door} & θα βγάλω && \my{to take out}\\
+            μαθαίνω & \emoji{books} & θα μάθω && \my{to learn}\\
+            καταλαβαίνω & \emoji{thought-balloon} & θα καταλάβω && \my{to understand}\\
+            στέλνω & \emoji{envelope} & θα στείλω && \my{to send}\\
+            δίνω & \emoji{gift} & θα δώσω && \my{to give}\\
+            φέρνω & \emoji{shopping-bags} & θα φέρω && \my{to bring}\\
+            θέλω & \emoji{thought-balloon} & θα θελήσω && \my{to want}\\
+            μένω & \emoji{house} & θα μείνω && \my{to stay}\\
+            πέφτω & \emoji{leaves} & θα πέσω && \my{to fall}\\
+            παραγγέλνω & \emoji{takeout-box} & θα παραγγείλω && \my{to order}\\
+            έρχομαι & \emoji{arrow-right-hook} & θα έρθω && \my{to come}\\
+            γίνομαι & \emoji{seedling} & θα γίνω && \my{to become}\\
+            κάθομαι & \emoji{chair} & θα καθίσω && \my{to seat}\\
+            [2mm]
+            %
+            βλέπω & \emoji{eyes} & θα δω &
+                \multirow{8}{10mm}{
+                    \begin{tabular}{l}
+                        \emoji{three}\\
+                        -ώ\\
+                        -είς\\
+                        -εί\\
+                        -ούμε\\
+                        -είτε\\
+                        -ούν
+                    \end{tabular}
+                }
+                & \my{to see}\\
+            λέω & \emoji{speech-balloon} & θα πω && \my{to say}\\
+            πίνω & \emoji{cup-with-straw} & θα πιω && \my{to drink}\\
+            βγαίνω & \emoji{door} & θα βγω && \my{to go out}\\
+            μπαίνω & \emoji{arrow-right} & θα μπω && \my{to enter}\\
+            βρίσκω & \emoji{mag} & θα βρω && \my{to find}\\
+            ανεβαίνω & \emoji{arrow-up} & θα ανεβώ && \my{to go up}\\
+            κατεβαίνω & \emoji{arrow-down} & θα κατεβώ && \my{to go down}\\
+            [2mm]
+            τρώω & \emoji{fork-and-knife} & θα φάω &
+            \multirow{2}{10mm}{
+                \begin{tabular}{l}
+                    \emoji{two}
+                \end{tabular}
+            }
+            & \my{to eat}\\
+            πηγαίνω & \emoji{arrow-right} & θα πάω && \my{to go}\\
         \end{tabular}
     \end{page}
 
