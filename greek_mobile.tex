@@ -4,7 +4,7 @@
 
 \documentclass[12pt]{extarticle}
 
-\usepackage[paperheight=156mm, paperwidth=87.75mm, margin=2mm, showframe=false]{geometry}
+\usepackage[paperheight=156mm, paperwidth=87.75mm, margin=2mm]{geometry}
 
 \usepackage{booktabs}
 \usepackage{multirow}
@@ -29,9 +29,10 @@
 }
 
 \newenvironment{page}{\clearpage\normalsize\null\vfill}{\vfill\null}
+%\newenvironment{description}{\clearpage\normalsize\null\vfill}{\vfill\null}
 \newcommand{\mysection}[1]{\section*{\my{#1}}\addcontentsline{toc}{section}{#1}}
 \newcommand{\mysubsection}[1]{\subsection*{\my{#1}}\addcontentsline{toc}{subsection}{#1}}
-\newcommand{\mysubsubsection}[1]{\subsubsection*{\my{#1}}\addcontentsline{toc}{subsubsection}{#1}}
+\newcommand{\mysubsubsection}[1]{\subsubsection*{\my{#1}}}
 
 
 
@@ -740,6 +741,36 @@
     \begin{page}
 	    %\mysection{\emoji{backhand-index-pointing-right} Accusative case}
         \mysection{Падежи}
+
+                \small
+        \begin{tabular}{lllllllllll}
+            \multirow{3}{8mm}{\emoji{male-sign}} & им. & o & πελάτης & γείτονας & φίλος\\
+            & вин. & τον & πελάτη & γείτονα & φίλο\\
+            & род. & του & πελάτη & γείτονα & φίλου
+            \\[1mm]
+            \multirow{3}{8mm}{\emoji{male-sign}\emoji{male-sign}} & им. & οι & πελάτες & γείτονες & φίλοι\\
+            & вин. & τους & πελάτες & γείτονες & φίλους\\
+            & род. & των & πελατών & γειτόνων & φίλων
+            \\[3mm]
+            \multirow{3}{8mm}{\emoji{female-sign}} & им. & η & αδελφή & γυναίκα & άσκηση\\
+            & вин. & την & αδελφή & γυναίκα & άσκηση\\
+            & род. & της & αδελφής & γυναίκας & άσκησης
+            \\[1mm]
+            \multirow{3}{8mm}{\emoji{female-sign}\emoji{female-sign}} & им. & οι & αδελφές & γυναίκες & ασκήσεις\\
+            & вин. & τις & αδελφές & γυναίκες & ασκήσεις\\
+            & род. & των & αδελφών & γυναικών & ασκήσεων
+            \\[3mm]
+            \multirow{3}{8mm}{\emoji{package}} & им. & το & δώρο & παιδί & πρόβλημα\\
+            & вин. & το & δώρο & παιδί & πρόβλημα\\
+            & род. & του & δώρου & παιδιού & προβλήματος
+            \\[1mm]
+            \multirow{3}{8mm}{\emoji{package}\emoji{package}} & им. & τα & δώρα & παιδιά & προβλήματα\\
+            & вин. & τα & δώρα & παιδιά & προβλήματα\\
+            & род. & των & δώρων & παιδιών & προβλημάτων
+        \end{tabular}
+    \end{page}
+
+    \begin{page}
         \mysubsection{Винительный}
 	    \small
 	    \begin{tabular}{rrrr}
@@ -784,33 +815,33 @@
     \begin{page}
         \mysubsection{Родительный}
 
-%        Отвечает на вопросы: кого? чего? чей? Часто идёт с~существительным
-%        (в~отличие от~винительного, который часто идёт с~глаголом).
-        \small
-        \begin{tabular}{lllllllllll}
-            \multirow{3}{8mm}{\emoji{male-sign}} & им. & o & πελάτης & γείτονας & φίλος\\
-            & вин. & τον & πελάτη & γείτονα & φίλο\\
-            & род. & του & πελάτη & γείτονα & φίλου
-            \\[1mm]
-            \multirow{3}{8mm}{\emoji{male-sign}\emoji{male-sign}} & им. & οι & πελάτες & γείτονες & φίλοι\\
-            & вин. & τους & πελάτες & γείτονες & φίλους\\
-            & род. & των & πελατών & γειτόνων & φίλων
-            \\[3mm]
-            \multirow{3}{8mm}{\emoji{female-sign}} & им. & η & αδελφή & γυναίκα & άσκηση\\
-            & вин. & την & αδελφή & γυναίκα & άσκηση\\
-            & род. & της & αδελφής & γυναίκας & άσκησης
-            \\[1mm]
-            \multirow{3}{8mm}{\emoji{female-sign}\emoji{female-sign}} & им. & οι & αδελφές & γυναίκες & ασκήσεις\\
-            & вин. & τις & αδελφές & γυναίκες & ασκήσεις\\
-            & род. & των & αδελφών & γυναικών & ασκήσεων
-            \\[3mm]
-            \multirow{3}{8mm}{\emoji{package}} & им. & το & δώρο & παιδί & πρόβλημα\\
-            & вин. & το & δώρο & παιδί & πρόβλημα\\
-            & род. & του & δώρου & παιδιού & προβλήματος
-            \\[1mm]
-            \multirow{3}{8mm}{\emoji{package}\emoji{package}} & им. & τα & δώρα & παιδιά & προβλήματα\\
-            & вин. & τα & δώρα & παιδιά & προβλήματα\\
-            & род. & των & δώρων & παιδιών & προβλημάτων
+        \begin{flushleft}
+            \tiny
+            \color{gray}
+            Кого? Чего? Чей? Почти всегда идёт после существительного.\\
+            Ο Γιάννης έχει ένα σπίτι. Το σπίτι του είναι μικρό. Το σπίτι του Γιάννη είναι μικρό.\\
+            Η Ελένη έχει ένα σπίτι. Το σπίτι της είναι μικρό. Το σπίτι της Ελένης είναι μικρό.\\
+            Το παιδί έχει ένα σπίτι. Το σπίτι του είναι μικρό. Το σπίτι του παιδιού είναι μικρό.
+        \end{flushleft}
+
+
+        \vspace{5mm}
+
+        \begin{tabular}{rrr}
+            του \emoji{male-sign} & της \emoji{female-sign} & του \emoji{package}\\
+            \my{Κώστ}α & \my{Άνν}ας & \my{παιδ}ιού\\
+            \my{πίνακ}α & \my{εικόν}ας & \my{μολυβ}ιού\\
+            \my{Γιάνν}η & \my{Ελέν}ης & \my{μωρ}ού\\
+            \my{χάρτ}η & \my{ζών}ης & \my{βιβλί}ου\\
+            \my{Πέτρ}ου & \my{τάξ}ης & \my{μαθή}ματος\\
+            \my{δρόμ}ου\\[3mm]
+            των \emoji{male-sign}\emoji{male-sign} & των \emoji{female-sign}\emoji{female-sign} & των \emoji{package}\emoji{package}\\
+            \my{χειμών}ων & \my{θαλασσ}ών & \my{παιδ}ιών\\
+            \my{πιν}ά\my{κ}ων & \my{εικόν}ων & \my{τραγουδ}ιών\\
+            \my{χαρτ}ών & \my{ζων}ών & \my{μωρ}ών\\
+            \my{τοίχ}ων & & \my{βιβλί}ων\\
+            \my{δασκάλ}ων && \my{θε}ά\my{τρ}ων\\
+            && \my{μαθη}μάτων
         \end{tabular}
     \end{page}
 
