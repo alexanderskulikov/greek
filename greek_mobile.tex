@@ -2,7 +2,7 @@
 % !TEX program = lualatex
 % !TEX root = greek_mobile.tex
 
-\documentclass[12pt]{extarticle}
+\documentclass[12pt]{article}
 
 \usepackage[paperheight=156mm, paperwidth=87.75mm, margin=2mm]{geometry}
 
@@ -18,6 +18,11 @@
 \usepackage{xcolor}
 \newcommand{\my}[1]{\textcolor{gray!60!white}{#1}}
 
+\usepackage{sectsty}
+%\sectionfont{\color{gray}}
+%\subsectionfont{\color{gray}}
+%\subsubsectionfont{\color{gray}}
+
 \usepackage{hyperref}
 \hypersetup{
 	hidelinks,
@@ -28,11 +33,11 @@
 	pdfpagemode=FullScreen,
 }
 
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
 \newenvironment{page}{\clearpage\normalsize\null\vfill}{\vfill\null}
-%\newenvironment{description}{\clearpage\normalsize\null\vfill}{\vfill\null}
-\newcommand{\mysection}[1]{\section*{\my{#1}}\addcontentsline{toc}{section}{#1}}
-\newcommand{\mysubsection}[1]{\subsection*{\my{#1}}\addcontentsline{toc}{subsection}{#1}}
-\newcommand{\mysubsubsection}[1]{\subsubsection*{\my{#1}}}
+\newenvironment{textblock}{\begin{minipage}{\textwidth}}{\end{minipage}\smallskip}
 
 
 
@@ -61,10 +66,10 @@
 	\centering
 
 	\begin{page}
-		%\mysection{\emoji{input-numbers} Αριθμοί (numbers)}
-		%\mysubsection{\emoji{input-numbers} Ακέραιοι αριθμοί (integers)}
-        \mysection{Числа}
-        \mysubsection{1--1000}
+		%\section{\emoji{input-numbers} Αριθμοί (numbers)}
+		%\subsection{\emoji{input-numbers} Ακέραιοι αριθμοί (integers)}
+        \section{Числа}
+        \subsection{1--1000}
 		\small
 		\begin{tabular}{rlrlrl}
 			\my{0} & μηδέν\\
@@ -82,8 +87,8 @@
 			\my{12} & δώδεκα & \my{120} & εκατόν είκοσι\\
 		\end{tabular}
 		\vfill
-		%\mysubsection{\emoji{sun} Ημέρες της εβδομάδας (weekdays)}
-        \mysubsection{Дни недели}
+		%\subsection{\emoji{sun} Ημέρες της εβδομάδας (weekdays)}
+        \subsection{Дни недели}
 		\begin{tabular}{rrrl}
 			\my{Sunday} & \emoji{sun} & & η Κυριακή\\
 			\my{Monday} & \emoji{unamused-face} & δύο & η Δευτέρα\\
@@ -96,8 +101,8 @@
 	\end{page}
 
 	\begin{page}
-		%\mysubsection{\emoji{watch} Ώρα (time)}
-        \mysubsection{Время}
+		%\subsection{\emoji{watch} Ώρα (time)}
+        \subsection{Время}
 		\begin{tabular}{rcl}
 			 & & είναι \dots \\
 			14:00 & \emoji{clock2} & δύο (η ώρα) ακριβώς (το απόγευμα)\\
@@ -119,10 +124,10 @@
 	\end{page}
 
 	\begin{page}
-%		\mysection{\emoji{man-dancing} Ρήματα (verbs)}
-%		\mysubsection{\emoji{performing-arts} Είμαι (to be)}
-        \mysection{Глаголы}
-        \mysubsection{Быть}
+%		\section{\emoji{man-dancing} Ρήματα (verbs)}
+%		\subsection{\emoji{performing-arts} Είμαι (to be)}
+        \section{Глаголы}
+        \subsection{Быть}
 		\begin{tabular}{rl}
 			εγώ & είμαι \\
 			εσύ & είσαι\\
@@ -134,8 +139,8 @@
 
 		\vfill
 
-        %\mysubsection{\emoji{stopwatch} Ενεστώτας (present tense)}
-        \mysubsection{Настоящее}
+        %\subsection{\emoji{stopwatch} Ενεστώτας (present tense)}
+        \subsection{Настоящее}
 
 %        \small
 %        \begin{tabular}{rrrrrr}
@@ -163,7 +168,7 @@
     \end{page}
 
 	\begin{page}
-		\mysubsubsection{-ω, -εις, -ει, -ουμε, -ετε, -ουν}
+		\subsubsection{-ω, -εις, -ει, -ουμε, -ετε, -ουν}
 		\begin{tabular}{rcl}
 			κάνω & \emoji{mechanic} & \my{to do}\\
 			μένω & \emoji{house} & \my{to live}\\
@@ -182,7 +187,7 @@
     \end{page}
 
 	\begin{page}
-		\mysubsubsection{-άω, -άς, -άει, -άμε, άτε, άνε}
+		\subsubsection{-άω, -άς, -άει, -άμε, άτε, άνε}
 		\begin{tabular}{rcl}
 			μιλάω & \emoji{speaking-head} & \my{to speak}\\
 			αγαπάω & \emoji{smiling-face-with-hearts} & \my{to love}\\
@@ -198,7 +203,7 @@
 			πονάω & \emoji{face-with-head-bandage} & \my{to be hurt}\\
 		\end{tabular}
 		\vfill
-		\mysubsubsection{-ώ, -είς, -εί, -ούμε, -είτε, -ούν}
+		\subsubsection{-ώ, -είς, -εί, -ούμε, -είτε, -ούν}
 		\begin{tabular}{rcl}
 			οδηγώ & \emoji{car} & \my{to drive}\\
 			μπορώ & \emoji{toolbox} & \my{to can}\\
@@ -210,7 +215,7 @@
 	\end{page}
 
 	\begin{page}
-	    \mysubsubsection{-ομαι, -εσαι, -εται, -όμαστε, -εστε, -ονται}
+	    \subsubsection{-ομαι, -εσαι, -εται, -όμαστε, -εστε, -ονται}
 	    \begin{tabular}{rcl}
 	        έρχομαι & \emoji{man-walking} & \my{to come}\\
 	        σκέφτομαι & \emoji{thinking-face} & \my{to think}\\
@@ -226,7 +231,7 @@
 	        εργάζομαι & \emoji{office-worker} & \my{to work}\\
 	    \end{tabular}
 	    \vfill
-	    \mysubsubsection{-άμαι, -άσαι, -άται, -όμαστε, -άστε, -ονται}
+	    \subsubsection{-άμαι, -άσαι, -άται, -όμαστε, -άστε, -ονται}
 	    \begin{tabular}{rcl}
 	        κοιμάμαι & \emoji{zzz} & \my{to sleep}\\
 	        φοβάμαι & \emoji{face-screaming-in-fear} & \my{to be afraid}\\
@@ -236,8 +241,8 @@
     \end{page}
 
     \begin{page}
-        %\mysubsection{\emoji{rocket} Απλός Μέλλοντας (future simple)}
-        \mysubsection{Простое будущее}
+        %\subsection{\emoji{rocket} Απλός Μέλλοντας (future simple)}
+        \subsection{Простое будущее}
         \tiny
         \begin{tabular}{lrcll}
             \multirow{6}{*}{\emoji{repeat}} & είμαι & \emoji{bust-in-silhouette} & θα είμαι & \my{to be}\\
@@ -298,7 +303,7 @@
     \end{page}
 
     \begin{page}
-    	\mysubsubsection{-ω}
+    	\subsubsection{-ω}
         \footnotesize
     	\begin{tabular}{rclll}
     		\multicolumn{5}{l}{\my{ζ, v $\to$ σ}}\\
@@ -341,7 +346,7 @@
 			παίζω & \emoji{game-die} & θα παίξω && \my{to play}\\
     	\end{tabular}
 
-        \mysubsubsection{-ομαι, -άμαι}
+        \subsubsection{-ομαι, -άμαι}
         \begin{tabular}{rclll}
             έρχομαι & \emoji{running} & θα έρθω && \my{to come}\\
             γίνομαι & \emoji{sparkles} & θα γίνω & \emoji{one} & \my{to become}\\
@@ -351,7 +356,7 @@
     \end{page}
 
     \begin{page}
-        \mysubsubsection{-άω, -ω}
+        \subsubsection{-άω, -ω}
         \scriptsize
         \begin{tabular}{rclll}
             \multicolumn{5}{l}{\my{άω $\to$ ήσω}}\\
@@ -405,9 +410,9 @@
 
 
     \begin{page}
-        %\mysubsubsection{\emoji{triangular-flag-on-post} Ανώμαλα ρήματα
+        %\subsubsection{\emoji{triangular-flag-on-post} Ανώμαλα ρήματα
              %(irregular verbs)}
-        \mysubsubsection{Неправильные глаголы}
+        \subsubsection{Неправильные глаголы}
         \scriptsize
         \begin{tabular}{rclll}
             %\toprule
@@ -475,8 +480,8 @@
     \end{page}
 
     \begin{page}
-%        \mysubsection{\emoji{fast-reverse-button} Αόριστος (past tense)}
-        \mysubsection{Прошедшее}
+%        \subsection{\emoji{fast-reverse-button} Αόριστος (past tense)}
+        \subsection{Прошедшее}
         \begin{tabular}{rrrrrr}
             & & κάνω & τρώω\\
             εγώ & -α & \my{έκαν}α & \my{έφαγ}α\\
@@ -488,7 +493,7 @@
             & -αν & \my{έκαν}αν & \my{έφαγ}αν\\
         \end{tabular}
 
-        \mysubsubsection{-ω}
+        \subsubsection{-ω}
         \begin{tabular}{lrrr}
             \my{to read}  & διαβάζω & θα διαβάσω & διάβασα \\
             \my{to pay}  & πληρώνω & θα πληρώσω & πλήρωσα \\[2mm]
@@ -505,7 +510,7 @@
     \end{page}
 
     \begin{page}
-        \mysubsubsection{-άω, -ω}
+        \subsubsection{-άω, -ω}
         \scriptsize
         \begin{tabular}{lrrr}
             \my{to love} & αγαπάω & αγάπησα & θα αγαπήσω \\
@@ -537,9 +542,9 @@
     \end{page}
 
     \begin{page}
-%        \mysubsubsection{\emoji{triangular-flag-on-post} Ανώμαλα ρήματα
+%        \subsubsection{\emoji{triangular-flag-on-post} Ανώμαλα ρήματα
 %           (irregular verbs)}
-        \mysubsubsection{Неправильные глаголы}
+        \subsubsection{Неправильные глаголы}
         \scriptsize
         \begin{tabular}{llll}
                   & Ενεστώτας & Απλός Μέλλοντας & Αόριστος\\
@@ -580,8 +585,8 @@
     \end{page}
 
     \begin{page}
-        %\mysubsection{\emoji{thinking-face} Απλή Υποτακτική (simple subjunctive)}
-        \mysubsection{Простое сослагательное}
+        %\subsection{\emoji{thinking-face} Απλή Υποτακτική (simple subjunctive)}
+        \subsection{Простое сослагательное}
         %\small
         \begin{tabular}{lrcl}
             \my{I would like to} & θέλω / θα ήθελα &
@@ -613,9 +618,9 @@
     \end{page}
 
     \begin{page}
-        \mysection{Существительные}
-        %\mysection{\emoji{people-holding-hands} Plural}
-        \mysubsection{Множественное}
+        \section{Существительные}
+        %\section{\emoji{people-holding-hands} Plural}
+        \subsection{Множественное}
         \begin{tabular}{rrrrrr}
             o \emoji{male-sign} & οι \emoji{male-sign}\emoji{male-sign} &
             \quad η \emoji{female-sign} & οι \emoji{female-sign}\emoji{female-sign} &
@@ -628,10 +633,10 @@
     \end{page}
 
 	\begin{page}
-        %\mysection{\emoji{artist} People}
-        %\mysection{Люди}
-        %\mysubsection{\emoji{handshake} Meeting}
-        \mysubsection{Знакомство}
+        %\section{\emoji{artist} People}
+        %\section{Люди}
+        %\subsection{\emoji{handshake} Meeting}
+        \subsection{Знакомство}
         \scriptsize
     	\begin{tabular}{rl}%{p{32mm}p{60mm}}
     		Γεια σας! & \my{Здравствуйте!}\\
@@ -674,8 +679,8 @@
 	\end{page}
 
 	\begin{page}
-%		\mysubsection{\emoji{firefighter} Professions}
-        \mysubsection{Профессии}
+%		\subsection{\emoji{firefighter} Professions}
+        \subsection{Профессии}
 		\small
 		\begin{tabular}{rrcl}
 			\multicolumn{2}{r}{\emoji{male-sign}/\emoji{female-sign}}\\
@@ -705,8 +710,8 @@
 
 	\begin{page}
 		\vspace{-3mm}
-		%\mysection{\emoji{cool-button} Adjectives}
-        \mysection{Прилагательные}
+		%\section{\emoji{cool-button} Adjectives}
+        \section{Прилагательные}
 		\scriptsize
 		\begin{tabular}{rcl}
 			καλός & \emoji{superhero} & \my{good}\\
@@ -742,18 +747,19 @@
 
 
     \begin{page}
-	    %\mysection{\emoji{backhand-index-pointing-right} Accusative case}
-        \mysection{Падежи}
-        \begin{flushleft}
+	    %\section{\emoji{backhand-index-pointing-right} Accusative case}
+        \section{Падежи}
+        \begin{textblock}
             \tiny
-            \color{gray}
+            %\color{gray}
             \emph{Винительный:} кого? что? Часто идёт после глагола и~с~предлогами
             σε (в, на, к),
             με (с, при помощи),
             για (для, про, ради),
             μετά (после).\\
             \emph{Родительный:} кого? чего? чей? Часто идёт после существительного.
-        \end{flushleft}
+        \end{textblock}
+        \smallskip
 
         \small
         \begin{tabular}{lrrrrrr}
@@ -794,16 +800,15 @@
     \end{page}
 
     \begin{page}
-        \mysubsection{Винительный}
-        \begin{flushleft}
+        \subsection{Винительный}
+        \begin{textblock}
         	\tiny
-        	\color{gray}
         	Кого? Что? Часто идёт после глагола и~с~такими предлгами:
             σε (в, на, к),
             με (с, при помощи),
             για (для, про, ради),
             μετά (после).
-        \end{flushleft}
+        \end{textblock}
 	    \footnotesize
 	    \begin{tabular}{rrrr}
 	        \emoji{male-sign} &
@@ -845,16 +850,15 @@
     \end{page}
 
     \begin{page}
-        \mysubsection{Родительный}
+        \subsection{Родительный}
 
-        \begin{flushleft}
+        \begin{textblock}
             \tiny
-            \color{gray}
             Кого? Чего? Чей? Почти всегда идёт после существительного.\\
             Ο Γιάννης έχει ένα σπίτι. Το σπίτι του είναι μικρό. Το σπίτι του Γιάννη είναι μικρό.\\
             Η Ελένη έχει ένα σπίτι. Το σπίτι της είναι μικρό. Το σπίτι της Ελένης είναι μικρό.\\
             Το παιδί έχει ένα σπίτι. Το σπίτι του είναι μικρό. Το σπίτι του παιδιού είναι μικρό.
-        \end{flushleft}
+        \end{textblock}
 
 
         \vspace{5mm}
@@ -878,8 +882,8 @@
     \end{page}
 
     \begin{page}
-        %\mysection{\emoji{atom-symbol} Conjunctions and particles}
-        \mysection{Разное}
+        %\section{\emoji{atom-symbol} Conjunctions and particles}
+        \section{Разное}
         \begin{tabular}{rl}
             Όμως & \my{but, however}\\
             Όταν & \my{when}\\
@@ -900,8 +904,8 @@
     \end{page}
 
     \begin{page}
-        %\mysection{\emoji{owl} Τι; Πού; Πότε; (What? Where? When?)}
-        \mysubsection{Что? Где? Когда?}
+        %\section{\emoji{owl} Τι; Πού; Πότε; (What? Where? When?)}
+        \subsection{Что? Где? Когда?}
         \scriptsize
         \setlength{\tabcolsep}{2pt}
         \null\hspace{-2mm}
@@ -940,8 +944,8 @@
     \end{page}
 
     \begin{page}
-        %\mysection{\emoji{round-pushpin} Προθέσεις (prepositions)}
-        \mysubsection{Предлоги}
+        %\section{\emoji{round-pushpin} Προθέσεις (prepositions)}
+        \subsection{Предлоги}
         \begin{tabular}{rl}
             από & \my{from, since, by}\\
             σε & \my{in, at, to}\\
@@ -965,46 +969,179 @@
     \end{page}
 
     \begin{page}
-        \mysection{Совет министров}
-        \scriptsize
-        \begin{tabular}{p{50mm}p{34mm}}
-            Πρόεδρος \newline\my{President} & Νίκος Χριστοδουλίδης\newline \my{Nikos Christodoulides} \\
+    	\null\vspace{-30mm}
+    	\section{Культура}
+    	\subsection{Политика}
+    	\tiny
+    	
+    	\begin{textblock}
+    		Независимая страна с 1960 (соглашения Цюриха--Лондона). Форма правления~--- президентская республика. Президент (исполнительная власть) избирается народом каждые пять лет и управляет страной вместе с кабинетом министров, которых он сам назначает.
+    		C~1~мая 2004 входит в ЕC. Вступил в Еврозону 1~января 2008. Является членом ООН, не является членом НАТО. Законодательная власть осуществляется Палатой представителей (Парламентом), насчитывающей 80 мест: 56 для греко-киприотов и 24 для турко-киритов. Депутаты избираются каждые пять лет прям голосования народа. С 1963 года турко-киприоты покинули Парламент, поэтому на сегодняшний день он представлен только греко-киприотами.
+    	\end{textblock}
 
-            Υπουργός Εξωτερικών \newline\my{Minister of Foreign Affairs} & Κωνσταντίνος Κόμπος\newline \my{Konstantinos Kompos} \\
+    	
+        \subsubsection{Совет министров}
+        \begin{tabular}{rl}
+        	Πρόεδρος & Νίκος Χριστοδουλίδης\\
+        	\my{President} & \my{Nikos Christodoulides}\\
 
-            Υπουργός Εσωτερικών \newline\my{Minister of Interior} & Κωνσταντίνος Ιωάννου
-            \newline \my{Konstantinos Ioannou} \\
-
-            Υπουργός Οικονομικών \newline\my{Minister of Finance} & Μάκης Κεραυνός \newline\my{Makis Keravnos} \\
-
-            Υπουργός Ενέργειας, Εμπορίου, Βιομηχανίας και Τουρισμού \newline\my{Minister of Energy, Commerce, Industry and Tourism} & Γιώργος Παπαναστασίου \newline\my{Giorgos Papanastasiou} \\
-
-            Υπουργός Εργασίας και Κοινωνικών Ασφαλίσεων \newline\my{Minister of Labour and Social Insurance} & Γιάννης Παναγιώτου \newline\my{Giannis Panayiotou} \\
-
-            Υπουργός Γεωργίας, Αγροτικής Ανάπτυξης και Περιβάλλοντος \newline\my{Minister of Agriculture, Natural Resources and Environment} & Μαρία Παναγιώτου \newline\my{Maria Panayiotou} \\
-
-            Υπουργός Παιδείας και Πολιτισμού \newline\my{Minister of Education and Culture} & Αθηνά Μιχαηλίδου \newline\my{Athina Michailidou} \\
-
-            Υπουργός Δικαιοσύνης και Δημοσίας Τάξεως \newline\my{Minister of Justice and Public Order} & Μάριος Χαρτσιώτης \newline\my{Marios Hartsiotis} \\
-
-            Υπουργός Άμυνας \newline\my{Minister of Defence} & Βασίλης Πάλμας \newline\my{Vasilis Palmas} \\
-
-            Υπουργός Μεταφορών, Επικοινωνιών και Έργων \newline\my{Minister of Transport, Communications and Works} & Αλέξης Βαφειάδης \newline\my{Alexis Vafiadis} \\
-
-            Υπουργός Υγείας \newline\my{Minister of Health} & Μιχάλης Δαμιανός \newline\my{Michalis Damianos} \\
-
-            Κυβερνητικός Εκπρόσωπος \newline\my{Government Spokesman} & Κωνσταντίνος Λετυμπιώτης \newline\my{Konstantinos Letimpiotis} \\
+        	Υπουργός Εξωτερικών & Κωνσταντίνος Κόμπος\\
+        	\my{Minister of Foreign Affairs} & \my{Konstantinos Kompos} \\
+        	
+        	Υπουργός Οικονομικών & Μάκης Κεραυνός\\
+        	\my{Minister of Finance} & \my{Makis Keravnos} \\
+        	
+        	Υπουργός Εσωτερικών & Κωνσταντίνος Ιωάννου\\
+        	\my{Minister of Interior} & \my{Konstantinos Ioannou} \\
+        	
+        	Υπουργός Άμυνας & Βασίλης Πάλμας\\
+        	\my{Minister of Defence} & \my{Vasilis Palmas} \\
+        	
+        	Υπουργός Παιδείας, Αθλητισμού και Νεολαίας & Αθηνά Μιχαηλίδου\\
+        	\my{Minister of Education, Sport and Youth} & \my{Athina Michaelidou} \\
+        	
+        	Υπουργός Μεταφορών, Επικοινωνιών και Έργων & Αλέξης Βαφεάδης\\
+        	\my{Minister of Transport, Communications and Works} & \my{Alexis Vafeades} \\
+        	
+        	Υπουργός Ενέργειας, Εμπορίου και Βιομηχανίας & Μιχάλης Δαμιανού\\
+        	\my{Minister of Energy, Commerce and Industry} & \my{Michalis Damianos} \\
+        	
+        	\my{(*)} Υπουργός Γεωργίας, Αγροτικής Ανάπτυξης και Περιβάλλοντος & Μαρία Παναγιώτου\\
+        	\my{Minister of Agriculture, Rural Development and Environment} & \my{Maria Panayiotou} \\
+        	
+        	Υπουργός Εργασίας και Κοινωνικών Ασφαλίσεων & Μαρίνος Μουσιούττας\\
+        	\my{Minister of Labour and Social Insurance} & \my{Marinos Mousiouttas} \\
+        	
+        	\my{(*)} Υπουργός Δικαιοσύνης και Δημόσιας Τάξεως & Κώστας Φιτσίρης\\
+        	\my{Minister of Justice and Public Order} & \my{Costas Fitiris} \\
+        	
+        	Υπουργός Υγείας & Νεόφυτος Χαραλαμπίδης\\
+        	\my{Minister of Health} & \my{Neophytos Charalambides} \\
+        \end{tabular}
+        
+        \subsubsection{Президенты}
+        \begin{tabular}{rl}
+        	1960--1977 & Αρχιεπίσκοπος Μακάριος Γʹ \\
+        	1977--1988 & Σπύρος Κυπριανού \\
+        	1988--1993 & Γιώργος Βασιλείου \my{(умер в январе 2026)}\\
+        	1993--2003 & Γλαύκος Κληρίδης \\
+        	2003--2008 & Τάσσος Παπαδόπουλος \\
+        	2008--2013 & Δημήτρης Χριστόφιας \\
+        	2013--2023 & Νίκος Αναστασιάδης \\
+        	2023--\phantom{2026} & Νίκος Χριστοδουλίδης \\
         \end{tabular}
     \end{page}
 
     \begin{page}
-        North — север — βορράς
-
-        East — восток — ανατολή
-
-        South — юг — νότος
-
-        West — запад — δύση
+    	\subsection{География}
+    	\begin{textblock}
+    		\tiny
+    		Остров в~восточной части Средиземного моря, расположен близко к~Европе, Азии 
+    		и~Африке. Он~является третьим по~величине островом в~Средиземном море после Сардинии и~Сицилии. Находится он к~востоку от~островов Родос и~Крит, к~югу 
+    		от~берегов Турции (на~расстоянии 75 километров), к~западу от~берегов Сирии 
+    		(на~расстоянии 105 километров) и~к~северу от~берегов Египта (на~расстоянии 380 километров).
+    		Кипр имеет площадь 9\,251 квадратных километров, максимальную длину 240 километров и~максимальную ширину 100 километров.
+    		36{,}2\% территории Кипра находится под турецкой оккупацией.
+    	\end{textblock}
+    	\includegraphics[width=\textwidth]{geography1}
+    	\includegraphics[width=\textwidth]{geography2}
     \end{page}
 
+	\begin{page}
+		\subsection{Даты}
+		\subsubsection{Праздники}
+		\begin{tabular}{rp{70mm}}
+			\scriptsize 01.01 & \scriptsize Πρωτοχρονιά \my{(Новый год)}
+			\tiny\newline Οικογενειακά γεύματα, βασιλόπιτα με φλουρί, επισκέψεις σε συγγενείς\newline
+			\my{Семейные обеды, василопита с монеткой, визиты к родственникам}\\
+			
+			\scriptsize 06.01 & \scriptsize Θεοφάνεια \my{(Богоявление)}
+			\tiny\newline Αγιασμός των υδάτων· στις ακτές γίνεται κατάδυση για τον σταυρό\newline
+			\my{Освящение воды; на побережье — ныряние за крестом}\\
+			
+			\scriptsize 25.03 & \scriptsize 25η Μαρτίου \my{(День греческой независимости)}
+			\tiny\newline Στρατιωτικές και σχολικές παρελάσεις, σημαίες της Ελλάδας και της Κύπρου\newline
+			\my{Военные и школьные парады, флаги Греции и Кипра}\\
+			
+			\scriptsize 01.04 & \scriptsize 1η Απριλίου \my{(Начало борьбы EOKA)}
+			\tiny\newline Επίσημες τελετές, καταθέσεις στεφάνων, σχολικές εκδηλώσεις\newline
+			\my{Официальные церемонии, возложение венков, школьные мероприятия}\\
+			
+			\scriptsize Πάσχα & \scriptsize Πάσχα \my{(Пасха)}
+			\tiny\newline Αναστάσιμη λειτουργία, οικογενειακό τραπέζι, βαμμένα αυγά, ψήσιμο κρέατος· αργία τη Δευτέρα\newline
+			\my{Ночная служба, семейное застолье, крашеные яйца, шашлыки; выходной понедельник}\\
+			
+			\scriptsize 01.05 & \scriptsize Πρωτομαγιά \my{(День труда)}
+			\tiny\newline Πικνίκ, εξορμήσεις στη φύση, μερικές φορές συγκεντρώσεις\newline
+			\my{Пикники, выезды на природу, иногда митинги}\\
+			
+			\scriptsize 15.08 & \scriptsize Κοίμηση της Θεοτόκου \my{(Успение Богородицы)}
+			\tiny\newline Θρησκευτικές λειτουργίες, επισκέψεις στα χωριά, οικογενειακοί εορτασμοί\newline
+			\my{Церковные службы, поездки в деревни, семейные праздники}\\
+			
+			\scriptsize 01.10 & \scriptsize Ημέρα Ανεξαρτησίας \my{(День независимости Кипра)}
+			\tiny\newline Στρατιωτική παρέλαση στη Λευκωσία, επίσημες εκδηλώσεις\newline
+			\my{Военный парад в Никосии, официальные мероприятия}\\
+			
+			\scriptsize 28.10 & \scriptsize 28η Οκτωβρίου \my{(День «Охи»)}
+			\tiny\newline Παρελάσεις, μνημόσυνες τελετές, πατριωτικές εκδηλώσεις\newline
+			\my{Парады, памятные церемонии, патриотические события}\\
+			
+			\scriptsize 25.12 & \scriptsize Χριστούγεννα \my{(Рождество)}
+			\tiny\newline Οικογενειακά δείπνα, δώρα, εκκλησιαστικές λειτουργίες\newline
+			\my{Семейные ужины, подарки, церковные службы}\\
+		\end{tabular}
+	\end{page}
+	
+	\begin{page}
+		\subsection{Важные даты}
+		\scriptsize
+		\begin{tabular}{rp{70mm}}
+			16.08.1960 & Ημέρα της Ανεξαρτησίας της Κύπρου\newline
+			\my{День независимости Кипра}\\
+			
+			21.12.1963 & Ματωμένα Χριστούγεννα\newline
+			\my{Кровавое рождество (начало межобщинных столкновений)}\\
+			
+			04.03.1964 & Άφιξη της Ειρηνευτικής Δύναμης των Ηνωμένων Εθνών\newline
+			\my{Размещение миротворческих сил ООН (ВСООНК)}\\
+			
+			15.07.1974 & Το Πραξικόπημα της 15ης Ιουλίου\newline
+			\my{Государственный переворот (свержение Макариоса III)}\\
+			
+			20.07.1974 & Η Τουρκική Εισβολή στην Κύπρο\newline
+			\my{Начало турецкого военного вторжения (Операция Аттила)}\\
+			
+			14.08.1974 & Η δεύτερη φάση της τουρκικής εισβολής\newline
+			\my{Вторая фаза вторжения и оккупация севера острова}\\
+			
+			03.08.1977 & Θάνατος του Αρχιεπισκόπου Μακαρίου Γ'\newline
+			\my{Смерть первого президента Кипра, архиепископа Макариоса III}\\
+			
+			15.11.1983 & Η Μονομερής Ανακήρυξη του Ψευδοκράτους\newline
+			\my{Одностороннее провозглашение «независимости» оккупированных территорий}\\
+			
+			14.08.1996 & Η δολοφονία του Σολωμού Σολωμού\newline
+			\my{Убийство Соломоса Солому во время протестов в Деринии}\\
+			
+			23.04.2003 & Το πρώτο άνοιγμα των οδοφραγμάτων\newline
+			\my{Первое открытие контрольно-пропускных пунктов на границе}\\
+			
+			24.04.2004 & Το Δημοψήφισμα για το Σχέδιο Ανάν\newline
+			\my{Референдум по Плану Аннана по объединению острова}\\
+			
+			01.05.2004 & Η Ένταξη της Κύπρου στην Ευρωπαϊκή Ένωση\newline
+			\my{Вступление Республики Кипр в Европейский Союз}\\
+			
+			01.01.2008 & Η Υιοθέτηση του Ευρώ στην Κύπρο\newline
+			\my{Официальный переход Кипра на валюту евро}\\
+			
+			11.07.2011 & Η έκρηξη στο Μαρί\newline
+			\my{Взрыв на военной базе «Евангелос Флоракис» в Мари}\\
+			
+			28.12.2011 & Ανακάλυψη Φυσικού Αερίου στο κοίτασμα «Αφροδίτη»\newline
+			\my{Официальное объявление об открытии газового месторождения «Афродита»}\\
+		\end{tabular}
+		
+	\end{page}
 \end{document}
