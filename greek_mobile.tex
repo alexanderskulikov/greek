@@ -4,7 +4,11 @@
 
 \documentclass[12pt]{article}
 
-\usepackage[paperheight=156mm, paperwidth=87.75mm, margin=4mm]{geometry}
+\usepackage[
+    paperheight=156mm, paperwidth=87.75mm,
+    left=3mm, right=3mm, top=5mm, bottom=5mm, headsep=0mm,
+    showframe
+]{geometry}
 
 \usepackage{booktabs}
 \usepackage{multirow}
@@ -16,7 +20,10 @@
 \setemojifont{Apple Color Emoji}
 
 \usepackage{xcolor}
-\newcommand{\my}[1]{\textcolor{gray!80!white}{#1}}
+\newcommand{\my}[1]{
+    %\textcolor{gray!80!white}{#1}
+    #1
+}
 
 %\usepackage{sectsty}
 %\sectionfont{\color{gray}}
@@ -978,8 +985,8 @@
     		Независимая страна с 1960 (соглашения Цюриха--Лондона). Форма правления~--- президентская республика. Президент (исполнительная власть) избирается народом каждые пять лет и управляет страной вместе с кабинетом министров, которых он сам назначает.
     		C~1~мая 2004 входит в ЕC. Вступил в Еврозону 1~января 2008. Является членом ООН, не является членом НАТО. Законодательная власть осуществляется Палатой представителей (Парламентом), насчитывающей 80 мест: 56 для греко-киприотов и 24 для турко-киритов. Депутаты избираются каждые пять лет прям голосования народа. С 1963 года турко-киприоты покинули Парламент, поэтому на сегодняшний день он представлен только греко-киприотами.
     	\end{textblock}
-        \vspace{-5mm}
-        \subsubsection{Совет министров}
+        %\vspace{-5mm}
+        %\subsubsection{Совет министров}
         \begin{tabular}{rl}
         	Πρόεδρος & Νίκος Χριστοδουλίδης\\
         	\my{President} & \my{Nikos Christodoulides}\\
@@ -1017,8 +1024,8 @@
         	Υπουργός Υγείας & Νεόφυτος Χαραλαμπίδης\\
         	\my{Minister of Health} & \my{Neophytos Charalambides} \\
         \end{tabular}
-        \null\vspace{-2mm}
-        \subsubsection{Президенты}
+        %\null\vspace{-2mm}
+        %\subsubsection{Президенты}
         \begin{tabular}{rl}
         	1960--1977 & Αρχιεπίσκοπος Μακάριος Γʹ \\
         	1977--1988 & Σπύρος Κυπριανού \\
